@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23F7AEBB4FFC39F6B7BBDF03 /* Pods_BookmeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3982AFE89C3850B4EE0916B /* Pods_BookmeTests.framework */; };
+		4121D4019D38E8DE7256E329 /* Pods_BookmeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78EB2B28201D67DB4148B456 /* Pods_BookmeUITests.framework */; };
+		A0EE01CA61C42DEFF2FD875A /* Pods_Bookme.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6F11F6BB8703172D12E89EF /* Pods_Bookme.framework */; };
 		C4BB88591EECD45A0099F81E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BB88581EECD45A0099F81E /* AppDelegate.swift */; };
 		C4BB885B1EECD45A0099F81E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BB885A1EECD45A0099F81E /* ViewController.swift */; };
 		C4BB885E1EECD45A0099F81E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4BB885C1EECD45A0099F81E /* Main.storyboard */; };
@@ -35,6 +38,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		075451B34A076496BA3A7F07 /* Pods-BookmeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookmeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookmeTests/Pods-BookmeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3C404EA18C7039FD0C3F4AC2 /* Pods-Bookme.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bookme.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bookme/Pods-Bookme.release.xcconfig"; sourceTree = "<group>"; };
+		78EB2B28201D67DB4148B456 /* Pods_BookmeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookmeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D711A5368D3B923F52C1190 /* Pods-BookmeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookmeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookmeUITests/Pods-BookmeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A6F11F6BB8703172D12E89EF /* Pods_Bookme.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bookme.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4BB88551EECD45A0099F81E /* Bookme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bookme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4BB88581EECD45A0099F81E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4BB885A1EECD45A0099F81E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +57,10 @@
 		C4BB88771EECD45A0099F81E /* BookmeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookmeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4BB887B1EECD45A0099F81E /* BookmeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmeUITests.swift; sourceTree = "<group>"; };
 		C4BB887D1EECD45A0099F81E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9CD34BF2B95D2CA30D219C4 /* Pods-BookmeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookmeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BookmeTests/Pods-BookmeTests.release.xcconfig"; sourceTree = "<group>"; };
+		D8BE6BC02CCB061DFF866127 /* Pods-Bookme.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bookme.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bookme/Pods-Bookme.debug.xcconfig"; sourceTree = "<group>"; };
+		F3982AFE89C3850B4EE0916B /* Pods_BookmeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookmeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5F0F5E74F8BE863C70B1ED3 /* Pods-BookmeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookmeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BookmeUITests/Pods-BookmeUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0EE01CA61C42DEFF2FD875A /* Pods_Bookme.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23F7AEBB4FFC39F6B7BBDF03 /* Pods_BookmeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +84,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4121D4019D38E8DE7256E329 /* Pods_BookmeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6F229C50833BEF625191FB4F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D8BE6BC02CCB061DFF866127 /* Pods-Bookme.debug.xcconfig */,
+				3C404EA18C7039FD0C3F4AC2 /* Pods-Bookme.release.xcconfig */,
+				075451B34A076496BA3A7F07 /* Pods-BookmeTests.debug.xcconfig */,
+				C9CD34BF2B95D2CA30D219C4 /* Pods-BookmeTests.release.xcconfig */,
+				7D711A5368D3B923F52C1190 /* Pods-BookmeUITests.debug.xcconfig */,
+				F5F0F5E74F8BE863C70B1ED3 /* Pods-BookmeUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C4BB884C1EECD45A0099F81E = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +111,8 @@
 				C4BB886F1EECD45A0099F81E /* BookmeTests */,
 				C4BB887A1EECD45A0099F81E /* BookmeUITests */,
 				C4BB88561EECD45A0099F81E /* Products */,
+				6F229C50833BEF625191FB4F /* Pods */,
+				FC2C85B202F20CC3B4DE4704 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,11 +129,15 @@
 		C4BB88571EECD45A0099F81E /* Bookme */ = {
 			isa = PBXGroup;
 			children = (
+				C4BB888F1EECDAC20099F81E /* Utilities */,
+				C4BB888E1EECDAAA0099F81E /* Services */,
+				C4BB888D1EECDA9C0099F81E /* Components */,
+				C4BB888C1EECDA8E0099F81E /* Storyboards */,
+				C4BB888B1EECDA6F0099F81E /* ViewControllers */,
+				C4BB888A1EECDA660099F81E /* Model */,
+				C4BB88891EECDA510099F81E /* Extensions */,
 				C4BB88581EECD45A0099F81E /* AppDelegate.swift */,
-				C4BB885A1EECD45A0099F81E /* ViewController.swift */,
-				C4BB885C1EECD45A0099F81E /* Main.storyboard */,
 				C4BB88621EECD45A0099F81E /* Assets.xcassets */,
-				C4BB88641EECD45A0099F81E /* LaunchScreen.storyboard */,
 				C4BB88671EECD45A0099F81E /* Info.plist */,
 				C4BB885F1EECD45A0099F81E /* Bookme.xcdatamodeld */,
 			);
@@ -128,6 +162,68 @@
 			path = BookmeUITests;
 			sourceTree = "<group>";
 		};
+		C4BB88891EECDA510099F81E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		C4BB888A1EECDA660099F81E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C4BB888B1EECDA6F0099F81E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C4BB885A1EECD45A0099F81E /* ViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C4BB888C1EECDA8E0099F81E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				C4BB885C1EECD45A0099F81E /* Main.storyboard */,
+				C4BB88641EECD45A0099F81E /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		C4BB888D1EECDA9C0099F81E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Components;
+			sourceTree = "<group>";
+		};
+		C4BB888E1EECDAAA0099F81E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		C4BB888F1EECDAC20099F81E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		FC2C85B202F20CC3B4DE4704 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A6F11F6BB8703172D12E89EF /* Pods_Bookme.framework */,
+				F3982AFE89C3850B4EE0916B /* Pods_BookmeTests.framework */,
+				78EB2B28201D67DB4148B456 /* Pods_BookmeUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +231,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C4BB88801EECD45A0099F81E /* Build configuration list for PBXNativeTarget "Bookme" */;
 			buildPhases = (
+				C77A1ADF0436496267720686 /* [CP] Check Pods Manifest.lock */,
 				C4BB88511EECD45A0099F81E /* Sources */,
 				C4BB88521EECD45A0099F81E /* Frameworks */,
 				C4BB88531EECD45A0099F81E /* Resources */,
+				32E988D46658C8DA0763BB61 /* [CP] Embed Pods Frameworks */,
+				A3D7EDF77F0E62605117E7CB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,9 +251,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C4BB88831EECD45A0099F81E /* Build configuration list for PBXNativeTarget "BookmeTests" */;
 			buildPhases = (
+				F16F8E2AD09BD0D7104DB9EE /* [CP] Check Pods Manifest.lock */,
 				C4BB88681EECD45A0099F81E /* Sources */,
 				C4BB88691EECD45A0099F81E /* Frameworks */,
 				C4BB886A1EECD45A0099F81E /* Resources */,
+				16FA9F76CC57F30F459A686C /* [CP] Embed Pods Frameworks */,
+				C89F55562C708D1620FBACCB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +272,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C4BB88861EECD45A0099F81E /* Build configuration list for PBXNativeTarget "BookmeUITests" */;
 			buildPhases = (
+				6EED2A6C09A19BC97D207D92 /* [CP] Check Pods Manifest.lock */,
 				C4BB88731EECD45A0099F81E /* Sources */,
 				C4BB88741EECD45A0099F81E /* Frameworks */,
 				C4BB88751EECD45A0099F81E /* Resources */,
+				77DA8F19FDCCDDC5813B0943 /* [CP] Embed Pods Frameworks */,
+				FE490A4E59327F46E4513726 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -256,6 +361,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		16FA9F76CC57F30F459A686C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BookmeTests/Pods-BookmeTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		32E988D46658C8DA0763BB61 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bookme/Pods-Bookme-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6EED2A6C09A19BC97D207D92 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		77DA8F19FDCCDDC5813B0943 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BookmeUITests/Pods-BookmeUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3D7EDF77F0E62605117E7CB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bookme/Pods-Bookme-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C77A1ADF0436496267720686 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C89F55562C708D1620FBACCB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BookmeTests/Pods-BookmeTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F16F8E2AD09BD0D7104DB9EE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FE490A4E59327F46E4513726 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BookmeUITests/Pods-BookmeUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C4BB88511EECD45A0099F81E /* Sources */ = {
@@ -416,6 +659,7 @@
 		};
 		C4BB88811EECD45A0099F81E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8BE6BC02CCB061DFF866127 /* Pods-Bookme.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Bookme/Info.plist;
@@ -428,6 +672,7 @@
 		};
 		C4BB88821EECD45A0099F81E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C404EA18C7039FD0C3F4AC2 /* Pods-Bookme.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Bookme/Info.plist;
@@ -440,6 +685,7 @@
 		};
 		C4BB88841EECD45A0099F81E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 075451B34A076496BA3A7F07 /* Pods-BookmeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -454,6 +700,7 @@
 		};
 		C4BB88851EECD45A0099F81E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9CD34BF2B95D2CA30D219C4 /* Pods-BookmeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -468,6 +715,7 @@
 		};
 		C4BB88871EECD45A0099F81E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D711A5368D3B923F52C1190 /* Pods-BookmeUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = BookmeUITests/Info.plist;
@@ -481,6 +729,7 @@
 		};
 		C4BB88881EECD45A0099F81E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5F0F5E74F8BE863C70B1ED3 /* Pods-BookmeUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = BookmeUITests/Info.plist;
@@ -511,6 +760,7 @@
 				C4BB88821EECD45A0099F81E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C4BB88831EECD45A0099F81E /* Build configuration list for PBXNativeTarget "BookmeTests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +769,7 @@
 				C4BB88851EECD45A0099F81E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C4BB88861EECD45A0099F81E /* Build configuration list for PBXNativeTarget "BookmeUITests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +778,7 @@
 				C4BB88881EECD45A0099F81E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
