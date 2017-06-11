@@ -10,14 +10,20 @@
 		23F7AEBB4FFC39F6B7BBDF03 /* Pods_BookmeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3982AFE89C3850B4EE0916B /* Pods_BookmeTests.framework */; };
 		4121D4019D38E8DE7256E329 /* Pods_BookmeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78EB2B28201D67DB4148B456 /* Pods_BookmeUITests.framework */; };
 		A0EE01CA61C42DEFF2FD875A /* Pods_Bookme.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6F11F6BB8703172D12E89EF /* Pods_Bookme.framework */; };
+		C4AB3E211EED213A00A1B5A9 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4AB3E201EED213A00A1B5A9 /* Login.storyboard */; };
+		C4AB3E231EED275700A1B5A9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AB3E221EED275700A1B5A9 /* LoginViewController.swift */; };
+		C4AB3E251EEDB02700A1B5A9 /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AB3E241EEDB02700A1B5A9 /* ImageExtension.swift */; };
+		C4AB3E271EEDF3DB00A1B5A9 /* TextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AB3E261EEDF3DA00A1B5A9 /* TextFieldExtension.swift */; };
 		C4BB88591EECD45A0099F81E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BB88581EECD45A0099F81E /* AppDelegate.swift */; };
-		C4BB885B1EECD45A0099F81E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BB885A1EECD45A0099F81E /* ViewController.swift */; };
-		C4BB885E1EECD45A0099F81E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4BB885C1EECD45A0099F81E /* Main.storyboard */; };
+		C4BB885B1EECD45A0099F81E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BB885A1EECD45A0099F81E /* HomeViewController.swift */; };
+		C4BB885E1EECD45A0099F81E /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4BB885C1EECD45A0099F81E /* Home.storyboard */; };
 		C4BB88611EECD45A0099F81E /* Bookme.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C4BB885F1EECD45A0099F81E /* Bookme.xcdatamodeld */; };
 		C4BB88631EECD45A0099F81E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4BB88621EECD45A0099F81E /* Assets.xcassets */; };
 		C4BB88661EECD45A0099F81E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4BB88641EECD45A0099F81E /* LaunchScreen.storyboard */; };
 		C4BB88711EECD45A0099F81E /* BookmeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BB88701EECD45A0099F81E /* BookmeTests.swift */; };
 		C4BB887C1EECD45A0099F81E /* BookmeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BB887B1EECD45A0099F81E /* BookmeUITests.swift */; };
+		C4BB88911EECE8E40099F81E /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BB88901EECE8E40099F81E /* LocalAuthentication.framework */; };
+		C4BB889D1EECF3EF0099F81E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4BB889C1EECF3EF0099F81E /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,10 +49,14 @@
 		78EB2B28201D67DB4148B456 /* Pods_BookmeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookmeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D711A5368D3B923F52C1190 /* Pods-BookmeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookmeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookmeUITests/Pods-BookmeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A6F11F6BB8703172D12E89EF /* Pods_Bookme.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bookme.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4AB3E201EED213A00A1B5A9 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = Storyboards/Login.storyboard; sourceTree = "<group>"; };
+		C4AB3E221EED275700A1B5A9 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ViewControllers/LoginViewController.swift; sourceTree = "<group>"; };
+		C4AB3E241EEDB02700A1B5A9 /* ImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageExtension.swift; path = Extensions/ImageExtension.swift; sourceTree = "<group>"; };
+		C4AB3E261EEDF3DA00A1B5A9 /* TextFieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextFieldExtension.swift; path = Extensions/TextFieldExtension.swift; sourceTree = "<group>"; };
 		C4BB88551EECD45A0099F81E /* Bookme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bookme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4BB88581EECD45A0099F81E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C4BB885A1EECD45A0099F81E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C4BB885D1EECD45A0099F81E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C4BB885A1EECD45A0099F81E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C4BB885D1EECD45A0099F81E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		C4BB88601EECD45A0099F81E /* Bookme.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bookme.xcdatamodel; sourceTree = "<group>"; };
 		C4BB88621EECD45A0099F81E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4BB88651EECD45A0099F81E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,6 +67,12 @@
 		C4BB88771EECD45A0099F81E /* BookmeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookmeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4BB887B1EECD45A0099F81E /* BookmeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmeUITests.swift; sourceTree = "<group>"; };
 		C4BB887D1EECD45A0099F81E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4BB88901EECE8E40099F81E /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		C4BB88981EECF2E20099F81E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Home.strings; sourceTree = "<group>"; };
+		C4BB88991EECF2ED0099F81E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Home.strings; sourceTree = "<group>"; };
+		C4BB889A1EECF2F40099F81E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		C4BB889B1EECF2F70099F81E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		C4BB889C1EECF3EF0099F81E /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		C9CD34BF2B95D2CA30D219C4 /* Pods-BookmeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookmeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BookmeTests/Pods-BookmeTests.release.xcconfig"; sourceTree = "<group>"; };
 		D8BE6BC02CCB061DFF866127 /* Pods-Bookme.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bookme.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bookme/Pods-Bookme.debug.xcconfig"; sourceTree = "<group>"; };
 		F3982AFE89C3850B4EE0916B /* Pods_BookmeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookmeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4BB88911EECE8E40099F81E /* LocalAuthentication.framework in Frameworks */,
 				A0EE01CA61C42DEFF2FD875A /* Pods_Bookme.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,6 +157,7 @@
 				C4BB88621EECD45A0099F81E /* Assets.xcassets */,
 				C4BB88671EECD45A0099F81E /* Info.plist */,
 				C4BB885F1EECD45A0099F81E /* Bookme.xcdatamodeld */,
+				C4BB889C1EECF3EF0099F81E /* Localizable.strings */,
 			);
 			path = Bookme;
 			sourceTree = "<group>";
@@ -165,6 +183,8 @@
 		C4BB88891EECDA510099F81E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C4AB3E241EEDB02700A1B5A9 /* ImageExtension.swift */,
+				C4AB3E261EEDF3DA00A1B5A9 /* TextFieldExtension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -179,7 +199,8 @@
 		C4BB888B1EECDA6F0099F81E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				C4BB885A1EECD45A0099F81E /* ViewController.swift */,
+				C4BB885A1EECD45A0099F81E /* HomeViewController.swift */,
+				C4AB3E221EED275700A1B5A9 /* LoginViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -187,8 +208,9 @@
 		C4BB888C1EECDA8E0099F81E /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				C4BB885C1EECD45A0099F81E /* Main.storyboard */,
+				C4BB885C1EECD45A0099F81E /* Home.storyboard */,
 				C4BB88641EECD45A0099F81E /* LaunchScreen.storyboard */,
+				C4AB3E201EED213A00A1B5A9 /* Login.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -217,6 +239,7 @@
 		FC2C85B202F20CC3B4DE4704 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C4BB88901EECE8E40099F81E /* LocalAuthentication.framework */,
 				A6F11F6BB8703172D12E89EF /* Pods_Bookme.framework */,
 				F3982AFE89C3850B4EE0916B /* Pods_BookmeTests.framework */,
 				78EB2B28201D67DB4148B456 /* Pods_BookmeUITests.framework */,
@@ -301,6 +324,7 @@
 				TargetAttributes = {
 					C4BB88541EECD45A0099F81E = {
 						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = GL4YKW7F52;
 						ProvisioningStyle = Automatic;
 					};
 					C4BB886B1EECD45A0099F81E = {
@@ -341,8 +365,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4BB88661EECD45A0099F81E /* LaunchScreen.storyboard in Resources */,
+				C4BB889D1EECF3EF0099F81E /* Localizable.strings in Resources */,
 				C4BB88631EECD45A0099F81E /* Assets.xcassets in Resources */,
-				C4BB885E1EECD45A0099F81E /* Main.storyboard in Resources */,
+				C4AB3E211EED213A00A1B5A9 /* Login.storyboard in Resources */,
+				C4BB885E1EECD45A0099F81E /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,8 +531,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4AB3E231EED275700A1B5A9 /* LoginViewController.swift in Sources */,
 				C4BB88611EECD45A0099F81E /* Bookme.xcdatamodeld in Sources */,
-				C4BB885B1EECD45A0099F81E /* ViewController.swift in Sources */,
+				C4BB885B1EECD45A0099F81E /* HomeViewController.swift in Sources */,
+				C4AB3E271EEDF3DB00A1B5A9 /* TextFieldExtension.swift in Sources */,
+				C4AB3E251EEDB02700A1B5A9 /* ImageExtension.swift in Sources */,
 				C4BB88591EECD45A0099F81E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -543,18 +572,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C4BB885C1EECD45A0099F81E /* Main.storyboard */ = {
+		C4BB885C1EECD45A0099F81E /* Home.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				C4BB885D1EECD45A0099F81E /* Base */,
+				C4BB88981EECF2E20099F81E /* en */,
+				C4BB88991EECF2ED0099F81E /* es */,
 			);
-			name = Main.storyboard;
+			name = Home.storyboard;
 			sourceTree = "<group>";
 		};
 		C4BB88641EECD45A0099F81E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				C4BB88651EECD45A0099F81E /* Base */,
+				C4BB889A1EECF2F40099F81E /* en */,
+				C4BB889B1EECF2F70099F81E /* es */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -566,6 +599,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -617,6 +651,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -662,6 +697,7 @@
 			baseConfigurationReference = D8BE6BC02CCB061DFF866127 /* Pods-Bookme.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = GL4YKW7F52;
 				INFOPLIST_FILE = Bookme/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.challenge.Bookme;
@@ -675,6 +711,7 @@
 			baseConfigurationReference = 3C404EA18C7039FD0C3F4AC2 /* Pods-Bookme.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = GL4YKW7F52;
 				INFOPLIST_FILE = Bookme/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.challenge.Bookme;

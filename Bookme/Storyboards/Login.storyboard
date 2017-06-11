@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D30" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Qzo-Dq-i9B">
+    <device id="ipad12_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--LoginViewController-->
+        <scene sceneID="W0M-Ub-sbZ">
+            <objects>
+                <viewController id="Qzo-Dq-i9B" userLabel="LoginViewController" customClass="LoginViewController" customModule="Bookme" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2G0-yn-kft"/>
+                        <viewControllerLayoutGuide type="bottom" id="uTb-2g-S3P"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleAspectFit" id="A5q-cl-HNS">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundRestaurant" translatesAutoresizingMaskIntoConstraints="NO" id="Lwg-If-e5J" userLabel="backgroundImage">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" placeholder="User" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2lD-jx-o0s" userLabel="userTextField">
+                                <rect key="frame" x="80" y="200" width="864" height="27"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="light" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" placeholder="Password" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ad0-qZ-tt7" userLabel="passwordTextField">
+                                <rect key="frame" x="80" y="370.5" width="864" height="27"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardAppearance="light" returnKeyType="done" secureTextEntry="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="1Lv-cG-1Lk" userLabel="loginButton">
+                                <rect key="frame" x="80" y="552.5" width="864" height="44"/>
+                                <color key="backgroundColor" red="0.91709256172180176" green="0.34242072701454163" blue="0.29809212684631348" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2G0-yn-kft" firstAttribute="bottom" secondItem="2lD-jx-o0s" secondAttribute="top" multiplier="1:10" id="5BV-OI-dMm"/>
+                            <constraint firstItem="uTb-2g-S3P" firstAttribute="top" secondItem="Lwg-If-e5J" secondAttribute="bottom" id="5WH-Sd-pjC"/>
+                            <constraint firstItem="ad0-qZ-tt7" firstAttribute="leading" secondItem="A5q-cl-HNS" secondAttribute="leadingMargin" constant="60" id="6Wm-xc-mRk"/>
+                            <constraint firstItem="1Lv-cG-1Lk" firstAttribute="centerX" secondItem="ad0-qZ-tt7" secondAttribute="centerX" id="8rL-tD-2rJ"/>
+                            <constraint firstItem="ad0-qZ-tt7" firstAttribute="bottom" secondItem="1Lv-cG-1Lk" secondAttribute="bottom" multiplier="3:4.5" id="9xg-A2-hbv"/>
+                            <constraint firstItem="Lwg-If-e5J" firstAttribute="top" secondItem="2G0-yn-kft" secondAttribute="bottom" constant="-20" id="Dil-ra-Wgu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Lwg-If-e5J" secondAttribute="trailing" constant="-20" id="FUw-eF-08a"/>
+                            <constraint firstItem="ad0-qZ-tt7" firstAttribute="trailing" secondItem="A5q-cl-HNS" secondAttribute="trailingMargin" multiplier="3:3" constant="-60" id="GVy-h8-UzT"/>
+                            <constraint firstItem="2lD-jx-o0s" firstAttribute="bottom" secondItem="ad0-qZ-tt7" secondAttribute="top" multiplier="2:3" constant="-20" id="MRF-gh-2aM"/>
+                            <constraint firstItem="Lwg-If-e5J" firstAttribute="leading" secondItem="A5q-cl-HNS" secondAttribute="leadingMargin" constant="-20" id="aaC-dS-eIy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1Lv-cG-1Lk" secondAttribute="trailing" constant="60" id="dVc-eB-B5T"/>
+                            <constraint firstItem="2lD-jx-o0s" firstAttribute="leading" secondItem="A5q-cl-HNS" secondAttribute="leadingMargin" multiplier="3:3" constant="60" id="ePw-LM-AxA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2lD-jx-o0s" secondAttribute="trailing" multiplier="3:3" constant="60" id="oeu-wA-oye"/>
+                            <constraint firstItem="1Lv-cG-1Lk" firstAttribute="leading" secondItem="A5q-cl-HNS" secondAttribute="leadingMargin" constant="60" id="zkN-jz-QVp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="0hz-1j-jrr"/>
+                    <connections>
+                        <outlet property="background" destination="Lwg-If-e5J" id="XIM-Fc-MKZ"/>
+                        <outlet property="passwordTextField" destination="ad0-qZ-tt7" id="vZW-aC-qaJ"/>
+                        <outlet property="userTextField" destination="2lD-jx-o0s" id="5vg-g6-uYL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1eU-bW-jFZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="331.640625" y="166.91068814055635"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BackgroundRestaurant" width="940" height="565"/>
+    </resources>
+</document>
