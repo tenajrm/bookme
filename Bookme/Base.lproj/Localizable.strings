@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  Bookme
+
+  Created by Janet Rivas on 6/10/17.
+  Copyright © 2017 Janet Rivas. All rights reserved.
+*/
+
+titleAlert = "Book Me";
+
+//Warnings
+noTouchID = "This device does not have a TouchID sensor.";
+

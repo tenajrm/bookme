@@ -13,57 +13,28 @@ import LocalAuthentication
 
 
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var background: UIImageView!
-    
     @IBOutlet weak var userTextField: UITextField!
-    
     @IBOutlet weak var passwordTextField: UITextField!
+    var isLogging: Bool = false
+    
+    @IBAction func login(_ sender: Any) {
+        if(!isLogging){
+            self.performSegue(withIdentifier: "home", sender: nil)
+            isLogging = true
+        }
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         background.addBlurEffect()
         userTextField.setBottomBorder()
         passwordTextField.setBottomBorder()
+        passwordTextField.delegate = self
     
-        // 1. Create a authentication context
-        let authenticationContext = LAContext()
-        var error:NSError?
-        
-        // 2. Check if the device has a fingerprint sensor
-        // If not, show the user an alert view and bail out!
-        guard authenticationContext.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) else {
-            
-            showAlertViewIfNoBiometricSensorHasBeenDetected()
-            return
-            
-        }
-        
-        // 3. Check the fingerprint
-        authenticationContext.evaluatePolicy(
-            .deviceOwnerAuthenticationWithBiometrics,
-            localizedReason: "Please, use your TouchID to login",
-            reply: { [unowned self] (success, error) -> Void in
-                if(success) {
-                    
-                    //self.navigateToAuthenticatedViewController()
-                    
-                }else {
-                    
-                    // Check if there is an error
-                    if let error = error {
-                        
-                        let message = self.errorMessageForLAErrorCode(errorCode: error._code)
-                        self.showAlertViewAfterEvaluatingPolicyWithMessage(message: message)
-                        
-                    }
-                    
-                }
-                
-        })
-
         
     }
     
@@ -73,49 +44,15 @@ class LoginViewController: UIViewController {
      */
     func showAlertViewIfNoBiometricSensorHasBeenDetected(){
         
-        showAlertWithTitle(title: "Error", message: "This device does not have a TouchID sensor.")
+        AlertHelp.showAlert(title:  NSLocalizedString("titleAlert", comment: "title"), message:  NSLocalizedString("noTouchID", comment: "Warnings"))
         
     }
     
-    /**
-     This method will present an UIAlertViewController to inform the user that there was a problem with the TouchID sensor.
-     
-     - parameter error: the error message
-     
-     */
-    func showAlertViewAfterEvaluatingPolicyWithMessage( message:String ){
-        
-        showAlertWithTitle(title: "Error", message: message)
-        
-    }
-    
-    /**
-     This method presents an UIAlertViewController to the user.
-     
-     - parameter title:  The title for the UIAlertViewController.
-     - parameter message:The message for the UIAlertViewController.
-     
-     */
-    func showAlertWithTitle( title:String, message:String ) {
-        
-        let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        
-        let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
-        alertVC.addAction(okAction)
-        
-        DispatchQueue.main.async() { () -> Void in
-            
-            self.present(alertVC, animated: true, completion: nil)
-            
-        }
-        
-    }
-    
+   
     /**
      This method will return an error message string for the provided error code.
      The method check the error code against all cases described in the `LAError` enum.
      If the error code can't be found, a default message is returned.
-     
      - parameter errorCode: the error code
      - returns: the error message
      */
@@ -165,10 +102,69 @@ class LoginViewController: UIViewController {
      This method will push the authenticated view controller onto the UINavigationController stack
      */
     func navigateToAuthenticatedViewController(){
-        
-        
+        if(!isLogging){
+            self.performSegue(withIdentifier: "home", sender: nil)
+            isLogging = true
+        }
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        passwordTextField.resignFirstResponder()
+        return true
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        self.navigationController?.isNavigationBarHidden = true
+        isLogging = false
+        
+        //Create a authentication context
+        let authenticationContext = LAContext()
+        var error:NSError?
+        
+        /*Check if the device has a fingerprint sensor
+         If not, show the user an alert view and bail out!*/
+        guard authenticationContext.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) else {
+            showAlertViewIfNoBiometricSensorHasBeenDetected()
+            return
+            
+        }
+        
+        // Check the fingerprint
+        authenticationContext.evaluatePolicy(
+            .deviceOwnerAuthenticationWithBiometrics,
+            localizedReason: "Please, use your FingerPrint..",
+            reply: { [unowned self] (success, error) -> Void in
+                if(success) {
+                    DispatchQueue.main.async {
+                        // Update UI
+                        self.navigateToAuthenticatedViewController()
+                    }
+                }else {
+                    // Check if there is an error
+                    if let error = error {
+                        let message = self.errorMessageForLAErrorCode(errorCode: error._code)
+                        print("Error Fingerprint Auth :\(message)")
+                        //AlertHelp.showAlert(title:  NSLocalizedString("titleAlert", comment: "title"), message:  message)
+                        
+                    }
+                }
+        })
+
+        
+    }
+
+    
+    // This function is called before the segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "home" {
+            let backItem = UIBarButtonItem()
+            backItem.title = "Log Out"
+            navigationItem.backBarButtonItem = backItem
+            _ = segue.destination as! HomeViewController
+        }
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
