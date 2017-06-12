@@ -56,10 +56,21 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="Qg0-Xy-FLg" kind="show" identifier="addEvent" id="L4p-dv-4yY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2004" y="707.49625187406298"/>
+        </scene>
+        <!--AddEventVC-->
+        <scene sceneID="XBP-Jb-tGx">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddEvent" referencedIdentifier="AddEventVC" id="Qg0-Xy-FLg" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X0C-wJ-iVv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-837" y="680"/>
         </scene>
     </scenes>
 </document>

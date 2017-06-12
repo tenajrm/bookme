@@ -15,8 +15,7 @@ class HomeViewController: UIViewController, UITableViewDelegate {
   
 
     @IBAction func addEvent(_ sender: Any) {
-        
-        
+        self.performSegue(withIdentifier: "addEvent", sender: nil)
     }
     
     override func viewDidLoad() {
@@ -76,6 +75,18 @@ class HomeViewController: UIViewController, UITableViewDelegate {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         
     }
+    
+    
+    // This function is called before the segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "addEvent" {
+            let backItem = UIBarButtonItem()
+            backItem.title = "Cancel"
+            navigationItem.backBarButtonItem = backItem
+            _ = segue.destination as! AddEventViewController
+        }
+    }
+
 
 
 }

@@ -18,6 +18,9 @@
 		C4AB3E2B1EEE0D6A00A1B5A9 /* AlertHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AB3E2A1EEE0D6A00A1B5A9 /* AlertHelp.swift */; };
 		C4AB3E2C1EEE0E6400A1B5A9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4AB3E2E1EEE0E6400A1B5A9 /* Localizable.strings */; };
 		C4AB3E321EEE1B7700A1B5A9 /* ReservaionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AB3E311EEE1B7700A1B5A9 /* ReservaionModel.swift */; };
+		C4AB3E341EEE44CE00A1B5A9 /* TimestampHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AB3E331EEE44CE00A1B5A9 /* TimestampHelper.swift */; };
+		C4AB3E361EEE458B00A1B5A9 /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AB3E351EEE458B00A1B5A9 /* AddEventViewController.swift */; };
+		C4AB3E391EEE4A6600A1B5A9 /* AddEvent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4AB3E3B1EEE4A6600A1B5A9 /* AddEvent.storyboard */; };
 		C4BB88591EECD45A0099F81E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BB88581EECD45A0099F81E /* AppDelegate.swift */; };
 		C4BB885B1EECD45A0099F81E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BB885A1EECD45A0099F81E /* HomeViewController.swift */; };
 		C4BB885E1EECD45A0099F81E /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4BB885C1EECD45A0099F81E /* Home.storyboard */; };
@@ -62,6 +65,9 @@
 		C4AB3E2F1EEE0E7200A1B5A9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C4AB3E301EEE0E7400A1B5A9 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C4AB3E311EEE1B7700A1B5A9 /* ReservaionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReservaionModel.swift; path = Model/ReservaionModel.swift; sourceTree = "<group>"; };
+		C4AB3E331EEE44CE00A1B5A9 /* TimestampHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimestampHelper.swift; path = Utilities/TimestampHelper.swift; sourceTree = "<group>"; };
+		C4AB3E351EEE458B00A1B5A9 /* AddEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddEventViewController.swift; path = ViewControllers/AddEventViewController.swift; sourceTree = "<group>"; };
+		C4AB3E3A1EEE4A6600A1B5A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/AddEvent.storyboard; sourceTree = "<group>"; };
 		C4BB88551EECD45A0099F81E /* Bookme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bookme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4BB88581EECD45A0099F81E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4BB885A1EECD45A0099F81E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -210,6 +216,7 @@
 			children = (
 				C4BB885A1EECD45A0099F81E /* HomeViewController.swift */,
 				C4AB3E221EED275700A1B5A9 /* LoginViewController.swift */,
+				C4AB3E351EEE458B00A1B5A9 /* AddEventViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -220,6 +227,7 @@
 				C4BB885C1EECD45A0099F81E /* Home.storyboard */,
 				C4BB88641EECD45A0099F81E /* LaunchScreen.storyboard */,
 				C4AB3E201EED213A00A1B5A9 /* Login.storyboard */,
+				C4AB3E3B1EEE4A6600A1B5A9 /* AddEvent.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -243,6 +251,7 @@
 		C4BB888F1EECDAC20099F81E /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				C4AB3E331EEE44CE00A1B5A9 /* TimestampHelper.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -377,6 +386,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4BB88661EECD45A0099F81E /* LaunchScreen.storyboard in Resources */,
+				C4AB3E391EEE4A6600A1B5A9 /* AddEvent.storyboard in Resources */,
 				C4AB3E2C1EEE0E6400A1B5A9 /* Localizable.strings in Resources */,
 				C4BB88631EECD45A0099F81E /* Assets.xcassets in Resources */,
 				C4AB3E211EED213A00A1B5A9 /* Login.storyboard in Resources */,
@@ -543,12 +553,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4AB3E341EEE44CE00A1B5A9 /* TimestampHelper.swift in Sources */,
 				C4AB3E231EED275700A1B5A9 /* LoginViewController.swift in Sources */,
 				C4AB3E291EEE0C6900A1B5A9 /* AlertViewController.swift in Sources */,
 				C4BB88611EECD45A0099F81E /* Bookme.xcdatamodeld in Sources */,
 				C4AB3E2B1EEE0D6A00A1B5A9 /* AlertHelp.swift in Sources */,
 				C4BB885B1EECD45A0099F81E /* HomeViewController.swift in Sources */,
 				C4AB3E271EEDF3DB00A1B5A9 /* TextFieldExtension.swift in Sources */,
+				C4AB3E361EEE458B00A1B5A9 /* AddEventViewController.swift in Sources */,
 				C4AB3E251EEDB02700A1B5A9 /* ImageExtension.swift in Sources */,
 				C4AB3E321EEE1B7700A1B5A9 /* ReservaionModel.swift in Sources */,
 				C4BB88591EECD45A0099F81E /* AppDelegate.swift in Sources */,
@@ -595,6 +607,15 @@
 				C4AB3E301EEE0E7400A1B5A9 /* es */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		C4AB3E3B1EEE4A6600A1B5A9 /* AddEvent.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C4AB3E3A1EEE4A6600A1B5A9 /* Base */,
+			);
+			name = AddEvent.storyboard;
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		C4BB885C1EECD45A0099F81E /* Home.storyboard */ = {
