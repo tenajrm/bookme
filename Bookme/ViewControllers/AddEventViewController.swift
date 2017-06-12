@@ -1,25 +1,26 @@
 //
-//  ViewController.swift
+//  AddEventViewController.swift
 //  Bookme
 //
-//  Created by Janet Rivas on 6/10/17.
+//  Created by Janet Rivas on 6/11/17.
 //  Copyright © 2017 Janet Rivas. All rights reserved.
 //
 
 import UIKit
+import RealmSwift
+import Foundation
 
-class ViewController: UIViewController {
+class AddEventViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
-
+    
 }
-
