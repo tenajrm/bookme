@@ -34,8 +34,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         userTextField.setBottomBorder()
         passwordTextField.setBottomBorder()
         passwordTextField.delegate = self
-    
-        
     }
     
     

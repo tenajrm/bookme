@@ -10,6 +10,8 @@
 		23F7AEBB4FFC39F6B7BBDF03 /* Pods_BookmeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3982AFE89C3850B4EE0916B /* Pods_BookmeTests.framework */; };
 		4121D4019D38E8DE7256E329 /* Pods_BookmeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78EB2B28201D67DB4148B456 /* Pods_BookmeUITests.framework */; };
 		A0EE01CA61C42DEFF2FD875A /* Pods_Bookme.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6F11F6BB8703172D12E89EF /* Pods_Bookme.framework */; };
+		C41464A61EEF9E610069E9E6 /* ContactCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C41464A51EEF9E610069E9E6 /* ContactCellView.xib */; };
+		C41464A81EEFA6AE0069E9E6 /* ContactCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41464A71EEFA6AE0069E9E6 /* ContactCellView.swift */; };
 		C4AB3E211EED213A00A1B5A9 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4AB3E201EED213A00A1B5A9 /* Login.storyboard */; };
 		C4AB3E231EED275700A1B5A9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AB3E221EED275700A1B5A9 /* LoginViewController.swift */; };
 		C4AB3E251EEDB02700A1B5A9 /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AB3E241EEDB02700A1B5A9 /* ImageExtension.swift */; };
@@ -55,6 +57,8 @@
 		78EB2B28201D67DB4148B456 /* Pods_BookmeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookmeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D711A5368D3B923F52C1190 /* Pods-BookmeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookmeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookmeUITests/Pods-BookmeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A6F11F6BB8703172D12E89EF /* Pods_Bookme.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bookme.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C41464A51EEF9E610069E9E6 /* ContactCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ContactCellView.xib; path = Components/ContactCellView.xib; sourceTree = "<group>"; };
+		C41464A71EEFA6AE0069E9E6 /* ContactCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactCellView.swift; path = Components/ContactCellView.swift; sourceTree = "<group>"; };
 		C4AB3E201EED213A00A1B5A9 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = Storyboards/Login.storyboard; sourceTree = "<group>"; };
 		C4AB3E221EED275700A1B5A9 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ViewControllers/LoginViewController.swift; sourceTree = "<group>"; };
 		C4AB3E241EEDB02700A1B5A9 /* ImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageExtension.swift; path = Extensions/ImageExtension.swift; sourceTree = "<group>"; };
@@ -237,6 +241,8 @@
 			children = (
 				C4AB3E281EEE0C6900A1B5A9 /* AlertViewController.swift */,
 				C4AB3E2A1EEE0D6A00A1B5A9 /* AlertHelp.swift */,
+				C41464A51EEF9E610069E9E6 /* ContactCellView.xib */,
+				C41464A71EEFA6AE0069E9E6 /* ContactCellView.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -386,6 +392,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4BB88661EECD45A0099F81E /* LaunchScreen.storyboard in Resources */,
+				C41464A61EEF9E610069E9E6 /* ContactCellView.xib in Resources */,
 				C4AB3E391EEE4A6600A1B5A9 /* AddEvent.storyboard in Resources */,
 				C4AB3E2C1EEE0E6400A1B5A9 /* Localizable.strings in Resources */,
 				C4BB88631EECD45A0099F81E /* Assets.xcassets in Resources */,
@@ -558,6 +565,7 @@
 				C4AB3E291EEE0C6900A1B5A9 /* AlertViewController.swift in Sources */,
 				C4BB88611EECD45A0099F81E /* Bookme.xcdatamodeld in Sources */,
 				C4AB3E2B1EEE0D6A00A1B5A9 /* AlertHelp.swift in Sources */,
+				C41464A81EEFA6AE0069E9E6 /* ContactCellView.swift in Sources */,
 				C4BB885B1EECD45A0099F81E /* HomeViewController.swift in Sources */,
 				C4AB3E271EEDF3DB00A1B5A9 /* TextFieldExtension.swift in Sources */,
 				C4AB3E361EEE458B00A1B5A9 /* AddEventViewController.swift in Sources */,
