@@ -11,3 +11,5 @@ titleAlert = "Book Me";
 //Warnings
 noTouchID = "This device does not have a TouchID sensor.";
 
+contactInfo = "Contact Information";
+

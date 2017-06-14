@@ -48,14 +48,6 @@ class HomeViewController: UIViewController, UITableViewDelegate {
             return 0
         }
     }
-
-   
-    
-    
-    //Numbers of rows in table view
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
     
     // method to run when table view cell is tapped
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -69,8 +61,8 @@ class HomeViewController: UIViewController, UITableViewDelegate {
         return 2
     }
     
-    
-    
+
+
     // this method handles row deletion
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         
@@ -86,7 +78,11 @@ class HomeViewController: UIViewController, UITableViewDelegate {
             _ = segue.destination as! AddEventViewController
         }
     }
-
+    
+    
+    
+    
+    
 
 
 }

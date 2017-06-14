@@ -7,41 +7,45 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactCellID" id="p8Z-l1-I4n" customClass="ContactCellView" customModule="Bookme" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="center" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactCellID" id="p8Z-l1-I4n" customClass="ContactCellView" customModule="Bookme" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="p8Z-l1-I4n" id="DdB-Cx-rNT">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gP0-du-tk8">
-                        <rect key="frame" x="18" y="8" width="44" height="28"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gP0-du-tk8">
+                        <rect key="frame" x="38" y="8" width="158" height="36"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WBw-0U-KLP">
-                        <rect key="frame" x="72" y="8" width="285" height="27.5"/>
-                        <nil key="textColor"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" textAlignment="right" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WBw-0U-KLP">
+                        <rect key="frame" x="179" y="8" width="158" height="36"/>
+                        <color key="textColor" red="0.92935490610000004" green="0.3411764706" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailingMargin" secondItem="WBw-0U-KLP" secondAttribute="trailing" constant="10" id="JxC-Sm-Hzp"/>
                     <constraint firstAttribute="topMargin" secondItem="gP0-du-tk8" secondAttribute="top" id="RjK-p3-7oV"/>
-                    <constraint firstItem="WBw-0U-KLP" firstAttribute="leading" secondItem="gP0-du-tk8" secondAttribute="trailing" constant="10" id="SJe-Lf-aI0"/>
                     <constraint firstAttribute="topMargin" secondItem="WBw-0U-KLP" secondAttribute="top" id="XA2-SN-4Pw"/>
-                    <constraint firstItem="gP0-du-tk8" firstAttribute="leading" secondItem="DdB-Cx-rNT" secondAttribute="leadingMargin" constant="10" id="buk-eC-uzo"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="gP0-du-tk8" secondAttribute="bottom" id="qi7-uE-GFl"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="WBw-0U-KLP" secondAttribute="bottom" id="wBc-cf-TnN"/>
+                    <constraint firstItem="gP0-du-tk8" firstAttribute="leading" secondItem="DdB-Cx-rNT" secondAttribute="leadingMargin" constant="30" id="gA5-7N-GVH"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="WBw-0U-KLP" secondAttribute="trailing" constant="30" id="nSP-Y7-eWW"/>
                 </constraints>
             </tableViewCellContentView>
+            <constraints>
+                <constraint firstItem="WBw-0U-KLP" firstAttribute="width" secondItem="p8Z-l1-I4n" secondAttribute="width" multiplier="1:2" constant="-30" id="2sf-GI-0db"/>
+                <constraint firstAttribute="bottom" secondItem="WBw-0U-KLP" secondAttribute="bottom" id="EnP-vz-Pvt"/>
+                <constraint firstItem="gP0-du-tk8" firstAttribute="width" secondItem="p8Z-l1-I4n" secondAttribute="width" multiplier="1:2" constant="-30" id="Jsy-er-0uJ"/>
+                <constraint firstAttribute="bottom" secondItem="gP0-du-tk8" secondAttribute="bottom" id="cG5-vD-gSM"/>
+            </constraints>
             <connections>
                 <outlet property="reservationLabel" destination="gP0-du-tk8" id="7BD-zZ-S6H"/>
                 <outlet property="reservationValue" destination="WBw-0U-KLP" id="OyU-LW-Gym"/>
