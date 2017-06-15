@@ -7,11 +7,11 @@
 //
 
 import Foundation
-import DatePickerCell
+import UIKit
 
-class ReservationDetails: UITableViewController {
+class ReservationDetails: UIViewController {
     
-    var cells:NSArray = []
+   /* var cells:NSArray = []
     
     override func viewDidLoad() {
         self.tableView.rowHeight = UITableViewAutomaticDimension
@@ -54,5 +54,5 @@ class ReservationDetails: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let section = cells[indexPath.section] as! NSArray
         return section[indexPath.row] as! UITableViewCell
-    }
+    }*/
 }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		23F7AEBB4FFC39F6B7BBDF03 /* Pods_BookmeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3982AFE89C3850B4EE0916B /* Pods_BookmeTests.framework */; };
 		4121D4019D38E8DE7256E329 /* Pods_BookmeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78EB2B28201D67DB4148B456 /* Pods_BookmeUITests.framework */; };
+		58E2149A1EF2E95C00FB35A5 /* TableViewHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58E214991EF2E95C00FB35A5 /* TableViewHelper.framework */; };
 		A0EE01CA61C42DEFF2FD875A /* Pods_Bookme.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6F11F6BB8703172D12E89EF /* Pods_Bookme.framework */; };
 		C40E6FB51EF2319300727A94 /* TextFieldWithPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40E6FB41EF2319300727A94 /* TextFieldWithPadding.swift */; };
 		C40E6FB91EF25B1300727A94 /* ReservationDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C40E6FBB1EF25B1300727A94 /* ReservationDetails.storyboard */; };
@@ -16,7 +17,6 @@
 		C40E6FCA1EF25D3B00727A94 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C40E6FC91EF25D3B00727A94 /* Realm.framework */; };
 		C40E6FCC1EF25D4500727A94 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C40E6FCB1EF25D4500727A94 /* Alamofire.framework */; };
 		C40E6FCE1EF25D4E00727A94 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C40E6FCD1EF25D4E00727A94 /* RealmSwift.framework */; };
-		C40E6FD71EF25ECB00727A94 /* DatePickerCell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C40E6FD61EF25ECB00727A94 /* DatePickerCell.framework */; };
 		C41464A61EEF9E610069E9E6 /* DateCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C41464A51EEF9E610069E9E6 /* DateCellView.xib */; };
 		C41464A91EF0B8000069E9E6 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C41464AB1EF0B8000069E9E6 /* Login.storyboard */; };
 		C41464B11EF1143B0069E9E6 /* PreferencesTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C41464B01EF1143B0069E9E6 /* PreferencesTextView.xib */; };
@@ -77,6 +77,7 @@
 /* Begin PBXFileReference section */
 		075451B34A076496BA3A7F07 /* Pods-BookmeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookmeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookmeTests/Pods-BookmeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3C404EA18C7039FD0C3F4AC2 /* Pods-Bookme.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bookme.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bookme/Pods-Bookme.release.xcconfig"; sourceTree = "<group>"; };
+		58E214991EF2E95C00FB35A5 /* TableViewHelper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TableViewHelper.framework; path = "../../../Library/Developer/Xcode/DerivedData/Bookme-dtcxeryeykdrjchahvvjxicnajcw/Build/Products/Debug-iphoneos/TableViewHelper/TableViewHelper.framework"; sourceTree = "<group>"; };
 		78EB2B28201D67DB4148B456 /* Pods_BookmeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookmeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D711A5368D3B923F52C1190 /* Pods-BookmeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookmeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookmeUITests/Pods-BookmeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A6F11F6BB8703172D12E89EF /* Pods_Bookme.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bookme.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,7 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C40E6FD71EF25ECB00727A94 /* DatePickerCell.framework in Frameworks */,
+				58E2149A1EF2E95C00FB35A5 /* TableViewHelper.framework in Frameworks */,
 				C40E6FCE1EF25D4E00727A94 /* RealmSwift.framework in Frameworks */,
 				C40E6FCC1EF25D4500727A94 /* Alamofire.framework in Frameworks */,
 				C40E6FCA1EF25D3B00727A94 /* Realm.framework in Frameworks */,
@@ -314,6 +315,7 @@
 		FC2C85B202F20CC3B4DE4704 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				58E214991EF2E95C00FB35A5 /* TableViewHelper.framework */,
 				C40E6FD61EF25ECB00727A94 /* DatePickerCell.framework */,
 				C40E6FD41EF25EA000727A94 /* DatePickerCell.framework */,
 				C40E6FCD1EF25D4E00727A94 /* RealmSwift.framework */,
@@ -838,7 +840,6 @@
 				DEVELOPMENT_TEAM = GL4YKW7F52;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/build/Release-iphoneos/DatePickerCell",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/Realm",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/RealmSwift",
 					"$(PROJECT_DIR)",
@@ -860,7 +861,6 @@
 				DEVELOPMENT_TEAM = GL4YKW7F52;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/build/Release-iphoneos/DatePickerCell",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/Realm",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/RealmSwift",
 					"$(PROJECT_DIR)",

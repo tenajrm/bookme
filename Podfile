@@ -14,8 +14,9 @@ pod 'RealmSwift'
 # Alamofire pod
 pod 'Alamofire', '~> 4.4'
 
-# DatePickerCell pod
-pod 'DatePickerCell'
+# TableViewHelper pod
+ pod 'TableViewHelper'
+
 
 # Pods for Bookme
 
