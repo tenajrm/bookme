@@ -7,41 +7,34 @@
 //
 
 import UIKit
-import RealmSwift
+//import RealmSwift
 import Foundation
 
 class AddEventViewController: UIViewController{
 
     @IBOutlet weak var addEventTableView: UITableView!
-    
-    
-    @IBOutlet weak var reservePickerView: UIView!
-    
-    @IBOutlet weak var reserveNavigationBar: UIBarButtonItem!
-    
+
     @IBAction func actionReserveNavigation(_ sender: Any) {
-        if modalState {
-            shiftToModal(shifingToModal: false)
-        }
+        
     }
     
-    @IBOutlet weak var reserveDatePicker: UIDatePicker!
+    @IBAction func Title(_ sender: Any) {
+        print("Editing..")
+    }
     
-
-    var modalState = false;
-    var items = ["Name ", "Email ", "Phone ", "Date "]
     
-    var indexpathCell : IndexPath?
-    
+    //var modalState = false;
+    var items = ["Title", "Name", "Email", "Phone", "Date", "Special Preferences"]
     
      override func viewDidLoad() {
         super.viewDidLoad()
         addEventTableView.dataSource = self
         addEventTableView.delegate = self
         
-        addEventTableView.register(UINib(nibName: "ContactCellView", bundle: nil), forCellReuseIdentifier: "ContactCellID")
-        shiftToModal(shifingToModal: false)
-        reserveDatePicker.addTarget(self, action:#selector(self.datePickerChanged(datePicker:)), for: UIControlEvents.valueChanged)
+        addEventTableView.register(UINib(nibName: "BasicCellView", bundle: nil), forCellReuseIdentifier: "basicCellID")
+        addEventTableView.register(UINib(nibName: "PreferencesTextView", bundle: nil), forCellReuseIdentifier: "preferenceCellID")
+        addEventTableView.register(UINib(nibName: "DateCellView", bundle: nil), forCellReuseIdentifier: "dateCellID")
+
         
     }
     
@@ -57,77 +50,73 @@ extension AddEventViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Getting the right element
         let element = items[indexPath.row]
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ContactCellID", for: indexPath) as! ContactCellView
-        //reuse a cell
-        cell.reservationLabel.text = element
-        cell.reservationLabel.textAlignment = .left
-        
-        if element == "Date " {
-            cell.reservationValue.text = TimestampHelper.getCurrentTimestamp(timestamp: Date())
-            cell.reservationValue.isEnabled = false
+        switch element {
+        case "Date":
+            let cell = addEventTableView.dequeueReusableCell(withIdentifier: "dateCellID", for: indexPath) as! DateCellView
+            //reuse a cell
+            cell.detailTextLabel?.text = TimestampHelper.getCurrentTimestamp(timestamp: Date())
+            
+            cell.detailTextLabel?.textColor =  UIColor.init(red: 234.0/255.0, green: 87.0/255.0, blue: 76.0/255.0, alpha: 1);
+            
+            return cell
+            
+         case "Special Preferences":
+            //Custom cell
+            let cell = addEventTableView.dequeueReusableCell(withIdentifier: "preferenceCellID", for: indexPath) as! PreferencesTextView
+            cell.preferencesTextView.text = "Special Preferences"
+            cell.preferencesTextView.textColor = UIColor.lightGray
+            
+            return cell
+            
+            
+        default:
+            let cell = addEventTableView.dequeueReusableCell(withIdentifier: "basicCellID", for: indexPath) as! BasicCellView
+            cell.contactInfo.text = element
+            cell.contactInfo.textColor = UIColor.lightGray
+            
+            return cell
+    
         }
-
-        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        self.indexpathCell = indexPath
-        
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let element = items[indexPath.row]
-        if element == "Date " {
+        //let element = items[indexPath.row]
+        
+        /*if element == "Date " {
             shiftToModal(shifingToModal: true)
-        }
+        }*/
             
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        
-        guard section == 0  else {
-            return "Special request"
-        }
-    
         return "Contact Information"
     }
     
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 70.0
+        return 50.0
     }
     
-    func shiftToModal(shifingToModal isShiftToModal: Bool) {
-        if isShiftToModal {
-            modalState = true;
-            reserveNavigationBar.title = "Select"
-            
-            reservePickerView.isHidden = false
-            reserveDatePicker.isHidden = false
-            self.navigationItem.leftBarButtonItem?.isEnabled = true
-            self.navigationItem.leftBarButtonItem?.tintColor = UIColor.white
-            self.navigationItem.setHidesBackButton(true, animated: false)
-            view.endEditing(true)
-
-        } else {
-            modalState = false;
-            reserveNavigationBar.title = "Reserve"
-            reservePickerView.isHidden = true
-            reserveDatePicker.isHidden = true
-            self.navigationItem.setHidesBackButton(false , animated: false)
-            self.navigationItem.leftBarButtonItem?.isEnabled = false
-            self.navigationItem.leftBarButtonItem?.tintColor = UIColor.clear
-
+    func tableView(_ tableView: UITableView, numberOfSectionsInTableView section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == items.count-1 {
+            return 100
         }
-        
+        return 44
     }
-    
     
     func datePickerChanged(datePicker:UIDatePicker) {
         let dateFormatter = DateFormatter()
@@ -137,9 +126,9 @@ extension AddEventViewController: UITableViewDataSource, UITableViewDelegate {
         let strDate = TimestampHelper.getCurrentTimestamp(timestamp : datePicker.date)
         print("sstrDate \(strDate)")
        
-        let currentCell = addEventTableView.cellForRow(at: self.indexpathCell!) as! ContactCellView
+       // let currentCell = addEventTableView.cellForRow(at: self.indexpathCell!) as! ContactCellView
         
-        currentCell.reservationValue.text = strDate
+        //currentCell.reservationValue.text = strDate
         
         
     }

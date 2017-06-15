@@ -10,11 +10,14 @@
 		23F7AEBB4FFC39F6B7BBDF03 /* Pods_BookmeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3982AFE89C3850B4EE0916B /* Pods_BookmeTests.framework */; };
 		4121D4019D38E8DE7256E329 /* Pods_BookmeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78EB2B28201D67DB4148B456 /* Pods_BookmeUITests.framework */; };
 		A0EE01CA61C42DEFF2FD875A /* Pods_Bookme.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6F11F6BB8703172D12E89EF /* Pods_Bookme.framework */; };
-		C41464A61EEF9E610069E9E6 /* ContactCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C41464A51EEF9E610069E9E6 /* ContactCellView.xib */; };
-		C41464A81EEFA6AE0069E9E6 /* ContactCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41464A71EEFA6AE0069E9E6 /* ContactCellView.swift */; };
+		C40E6FB51EF2319300727A94 /* TextFieldWithPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40E6FB41EF2319300727A94 /* TextFieldWithPadding.swift */; };
+		C41464A61EEF9E610069E9E6 /* DateCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C41464A51EEF9E610069E9E6 /* DateCellView.xib */; };
 		C41464A91EF0B8000069E9E6 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C41464AB1EF0B8000069E9E6 /* Login.storyboard */; };
 		C41464B11EF1143B0069E9E6 /* PreferencesTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C41464B01EF1143B0069E9E6 /* PreferencesTextView.xib */; };
 		C41464B31EF11CC90069E9E6 /* PreferencesTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41464B21EF11CC90069E9E6 /* PreferencesTextView.swift */; };
+		C41464B51EF207520069E9E6 /* DateCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41464B41EF207520069E9E6 /* DateCellView.swift */; };
+		C41464B71EF2097E0069E9E6 /* BasicCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C41464B61EF2097E0069E9E6 /* BasicCellView.xib */; };
+		C41464B91EF209F60069E9E6 /* BasicCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41464B81EF209F60069E9E6 /* BasicCellView.swift */; };
 		C4AB3E231EED275700A1B5A9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AB3E221EED275700A1B5A9 /* LoginViewController.swift */; };
 		C4AB3E251EEDB02700A1B5A9 /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AB3E241EEDB02700A1B5A9 /* ImageExtension.swift */; };
 		C4AB3E271EEDF3DB00A1B5A9 /* TextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AB3E261EEDF3DA00A1B5A9 /* TextFieldExtension.swift */; };
@@ -59,13 +62,16 @@
 		78EB2B28201D67DB4148B456 /* Pods_BookmeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookmeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D711A5368D3B923F52C1190 /* Pods-BookmeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookmeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookmeUITests/Pods-BookmeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A6F11F6BB8703172D12E89EF /* Pods_Bookme.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bookme.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C41464A51EEF9E610069E9E6 /* ContactCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ContactCellView.xib; path = Components/ContactCellView.xib; sourceTree = "<group>"; };
-		C41464A71EEFA6AE0069E9E6 /* ContactCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactCellView.swift; path = Components/ContactCellView.swift; sourceTree = "<group>"; };
+		C40E6FB41EF2319300727A94 /* TextFieldWithPadding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextFieldWithPadding.swift; path = Utilities/TextFieldWithPadding.swift; sourceTree = "<group>"; };
+		C41464A51EEF9E610069E9E6 /* DateCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DateCellView.xib; path = Components/DateCellView.xib; sourceTree = "<group>"; };
 		C41464AA1EF0B8000069E9E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		C41464AD1EF0B8040069E9E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Login.strings; sourceTree = "<group>"; };
 		C41464AF1EF0B84C0069E9E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/AddEvent.strings; sourceTree = "<group>"; };
 		C41464B01EF1143B0069E9E6 /* PreferencesTextView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PreferencesTextView.xib; path = Components/PreferencesTextView.xib; sourceTree = "<group>"; };
 		C41464B21EF11CC90069E9E6 /* PreferencesTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreferencesTextView.swift; path = Components/PreferencesTextView.swift; sourceTree = "<group>"; };
+		C41464B41EF207520069E9E6 /* DateCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateCellView.swift; sourceTree = "<group>"; };
+		C41464B61EF2097E0069E9E6 /* BasicCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BasicCellView.xib; path = Components/BasicCellView.xib; sourceTree = "<group>"; };
+		C41464B81EF209F60069E9E6 /* BasicCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BasicCellView.swift; path = Components/BasicCellView.swift; sourceTree = "<group>"; };
 		C4AB3E221EED275700A1B5A9 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ViewControllers/LoginViewController.swift; sourceTree = "<group>"; };
 		C4AB3E241EEDB02700A1B5A9 /* ImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageExtension.swift; path = Extensions/ImageExtension.swift; sourceTree = "<group>"; };
 		C4AB3E261EEDF3DA00A1B5A9 /* TextFieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextFieldExtension.swift; path = Extensions/TextFieldExtension.swift; sourceTree = "<group>"; };
@@ -247,10 +253,12 @@
 			children = (
 				C4AB3E281EEE0C6900A1B5A9 /* AlertViewController.swift */,
 				C4AB3E2A1EEE0D6A00A1B5A9 /* AlertHelp.swift */,
-				C41464A51EEF9E610069E9E6 /* ContactCellView.xib */,
-				C41464A71EEFA6AE0069E9E6 /* ContactCellView.swift */,
+				C41464A51EEF9E610069E9E6 /* DateCellView.xib */,
+				C41464B41EF207520069E9E6 /* DateCellView.swift */,
 				C41464B01EF1143B0069E9E6 /* PreferencesTextView.xib */,
 				C41464B21EF11CC90069E9E6 /* PreferencesTextView.swift */,
+				C41464B61EF2097E0069E9E6 /* BasicCellView.xib */,
+				C41464B81EF209F60069E9E6 /* BasicCellView.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -266,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				C4AB3E331EEE44CE00A1B5A9 /* TimestampHelper.swift */,
+				C40E6FB41EF2319300727A94 /* TextFieldWithPadding.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -400,8 +409,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4BB88661EECD45A0099F81E /* LaunchScreen.storyboard in Resources */,
-				C41464A61EEF9E610069E9E6 /* ContactCellView.xib in Resources */,
+				C41464A61EEF9E610069E9E6 /* DateCellView.xib in Resources */,
 				C41464B11EF1143B0069E9E6 /* PreferencesTextView.xib in Resources */,
+				C41464B71EF2097E0069E9E6 /* BasicCellView.xib in Resources */,
 				C4AB3E391EEE4A6600A1B5A9 /* AddEvent.storyboard in Resources */,
 				C4AB3E2C1EEE0E6400A1B5A9 /* Localizable.strings in Resources */,
 				C4BB88631EECD45A0099F81E /* Assets.xcassets in Resources */,
@@ -574,13 +584,15 @@
 				C4AB3E291EEE0C6900A1B5A9 /* AlertViewController.swift in Sources */,
 				C4BB88611EECD45A0099F81E /* Bookme.xcdatamodeld in Sources */,
 				C4AB3E2B1EEE0D6A00A1B5A9 /* AlertHelp.swift in Sources */,
-				C41464A81EEFA6AE0069E9E6 /* ContactCellView.swift in Sources */,
+				C41464B91EF209F60069E9E6 /* BasicCellView.swift in Sources */,
 				C4BB885B1EECD45A0099F81E /* HomeViewController.swift in Sources */,
+				C40E6FB51EF2319300727A94 /* TextFieldWithPadding.swift in Sources */,
 				C4AB3E271EEDF3DB00A1B5A9 /* TextFieldExtension.swift in Sources */,
 				C41464B31EF11CC90069E9E6 /* PreferencesTextView.swift in Sources */,
 				C4AB3E361EEE458B00A1B5A9 /* AddEventViewController.swift in Sources */,
 				C4AB3E251EEDB02700A1B5A9 /* ImageExtension.swift in Sources */,
 				C4AB3E321EEE1B7700A1B5A9 /* ReservaionModel.swift in Sources */,
+				C41464B51EF207520069E9E6 /* DateCellView.swift in Sources */,
 				C4BB88591EECD45A0099F81E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
