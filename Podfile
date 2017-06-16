@@ -12,10 +12,10 @@ use_frameworks!
 pod 'RealmSwift'
 
 # Alamofire pod
-pod 'Alamofire', '~> 4.4'
+#pod 'Alamofire', '~> 4.4'
 
 # TableViewHelper pod
- pod 'TableViewHelper'
+pod 'TableViewHelper'
 
 
 # Pods for Bookme
