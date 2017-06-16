@@ -19,15 +19,36 @@ class AddEventViewController: UIViewController, UITableViewDataSource, UITableVi
     
     @IBAction func reserveAction(_ sender: Any) {
         
-        let emailTextCell = tableView.dequeueReusableCell(withIdentifier: "emailCell") as? EmailCellView
+        let cells = self.tableView.visibleCells 
         
-        let email = emailTextCell?.emailTextField
-        let text = emailTextCell?.getText()
-        
-        print("EMAIL\(String(describing: email?.text)) and \(String(describing: text))")
-      
-        self.performSegue(withIdentifier: "reservationDetails", sender: nil)
-        
+        for cell in cells {
+            // get data from cells
+            
+            if(cell.reuseIdentifier == "selecDateCell"){
+                let dateCellText = cell
+                print("Date \(String(describing: dateCellText.detailTextLabel?.text)))")
+            }
+            
+            if(cell.reuseIdentifier == "emailCell"){
+                let emailCellText = cell as? EmailCellView
+                print("\(String(describing: emailCellText?.emailTextField.text))")
+            }
+            
+            if(cell.reuseIdentifier == "nameCell"){
+                let nameCellText = cell as? NameCellView
+                print("\(String(describing: nameCellText?.nameTextFieldCell.text))")
+            }
+            
+            if(cell.reuseIdentifier == "phoneCell"){
+                let phoneCellText = cell as? PhoneCellView
+                print("\(String(describing: phoneCellText?.phoneTextCellView.text))")
+            }
+            
+            if(cell.reuseIdentifier == "specialRCell"){
+                let preferencesCellText = cell as? PreferencesCellView
+                print("\(String(describing: preferencesCellText?.preferencesTextView.text))")
+            }
+        }
     }
     
     override func viewDidLoad() {
@@ -104,6 +125,7 @@ class AddEventViewController: UIViewController, UITableViewDataSource, UITableVi
                     let cellLabel = tableView.cellForRow(at: indexPath)!
                     
                     let dateString = TimestampHelper.getCurrentTimestamp(timestamp: (dataPicker?.date)!)
+                    cellLabel.detailTextLabel?.isHidden = false
                     cellLabel.detailTextLabel?.text = dateString
                     cellLabel.detailTextLabel?.textColor = UIColor.black
                     
@@ -113,6 +135,14 @@ class AddEventViewController: UIViewController, UITableViewDataSource, UITableVi
                 helper?.hideCell(name)
                 
             case "specialRCell":
+                
+                 let cellPreferences = tableView.cellForRow(at: indexPath) as? PreferencesCellView
+                 if(cellPreferences?.preferencesTextView.text == "Special Request") {
+                    cellPreferences?.preferencesTextView.text = ""
+                 } else if (cellPreferences?.preferencesTextView.text == ""){
+                    cellPreferences?.preferencesTextView.text = "Special Request"
+                 }
+
                 break
                 
             default:

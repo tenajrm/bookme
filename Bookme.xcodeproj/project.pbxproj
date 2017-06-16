@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0518955C0C3A4EFFD09D63F1 /* Pods_BookmeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C40E6FF41EF3796900727A94 /* Pods_BookmeTests.framework */; };
+		582BC5381EF44EBD0014F5BA /* NameCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582BC5371EF44EBD0014F5BA /* NameCellView.swift */; };
+		582BC53A1EF450D50014F5BA /* PhoneCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582BC5391EF450D50014F5BA /* PhoneCellView.swift */; };
+		582BC53C1EF453800014F5BA /* PreferencesCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582BC53B1EF453800014F5BA /* PreferencesCellView.swift */; };
+		67D130AB1D604F81CF604BEB /* Pods_BookmeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C40E6FF61EF3797B00727A94 /* Pods_BookmeUITests.framework */; };
 		C40E6FB51EF2319300727A94 /* TextFieldWithPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40E6FB41EF2319300727A94 /* TextFieldWithPadding.swift */; };
 		C40E6FB91EF25B1300727A94 /* ReservationDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C40E6FBB1EF25B1300727A94 /* ReservationDetails.storyboard */; };
 		C40E6FBF1EF25BAE00727A94 /* ReservationDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40E6FBE1EF25BAE00727A94 /* ReservationDetails.swift */; };
-		C40E6FD91EF3626F00727A94 /* DateLabelCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40E6FD81EF3626F00727A94 /* DateLabelCellView.swift */; };
 		C40E6FDB1EF36FC700727A94 /* DatePickerCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40E6FDA1EF36FC700727A94 /* DatePickerCellView.swift */; };
 		C40E6FEA1EF372AB00727A94 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BB88901EECE8E40099F81E /* LocalAuthentication.framework */; };
 		C40E6FF11EF3793000727A94 /* TableViewHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C40E6FF01EF3793000727A94 /* TableViewHelper.framework */; };
@@ -21,11 +25,7 @@
 		C40E6FFB1EF379A700727A94 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C40E6FFA1EF379A700727A94 /* RealmSwift.framework */; };
 		C41464A61EEF9E610069E9E6 /* DateCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C41464A51EEF9E610069E9E6 /* DateCellView.xib */; };
 		C41464A91EF0B8000069E9E6 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C41464AB1EF0B8000069E9E6 /* Login.storyboard */; };
-		C41464B11EF1143B0069E9E6 /* PreferencesTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C41464B01EF1143B0069E9E6 /* PreferencesTextView.xib */; };
-		C41464B31EF11CC90069E9E6 /* PreferencesTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41464B21EF11CC90069E9E6 /* PreferencesTextView.swift */; };
 		C41464B51EF207520069E9E6 /* DateCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41464B41EF207520069E9E6 /* DateCellView.swift */; };
-		C41464B71EF2097E0069E9E6 /* BasicCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C41464B61EF2097E0069E9E6 /* BasicCellView.xib */; };
-		C41464B91EF209F60069E9E6 /* BasicCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41464B81EF209F60069E9E6 /* BasicCellView.swift */; };
 		C4A68D261EF3ADE700620B79 /* EmailCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A68D251EF3ADE700620B79 /* EmailCellView.swift */; };
 		C4AB3E231EED275700A1B5A9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AB3E221EED275700A1B5A9 /* LoginViewController.swift */; };
 		C4AB3E251EEDB02700A1B5A9 /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AB3E241EEDB02700A1B5A9 /* ImageExtension.swift */; };
@@ -80,13 +80,15 @@
 /* Begin PBXFileReference section */
 		075451B34A076496BA3A7F07 /* Pods-BookmeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookmeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookmeTests/Pods-BookmeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3C404EA18C7039FD0C3F4AC2 /* Pods-Bookme.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bookme.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bookme/Pods-Bookme.release.xcconfig"; sourceTree = "<group>"; };
+		582BC5371EF44EBD0014F5BA /* NameCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NameCellView.swift; path = Components/NameCellView.swift; sourceTree = "<group>"; };
+		582BC5391EF450D50014F5BA /* PhoneCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhoneCellView.swift; path = Components/PhoneCellView.swift; sourceTree = "<group>"; };
+		582BC53B1EF453800014F5BA /* PreferencesCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreferencesCellView.swift; path = Components/PreferencesCellView.swift; sourceTree = "<group>"; };
 		7D711A5368D3B923F52C1190 /* Pods-BookmeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookmeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookmeUITests/Pods-BookmeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C40E6FB41EF2319300727A94 /* TextFieldWithPadding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextFieldWithPadding.swift; path = Utilities/TextFieldWithPadding.swift; sourceTree = "<group>"; };
 		C40E6FBA1EF25B1300727A94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ReservationDetails.storyboard; sourceTree = "<group>"; };
 		C40E6FBD1EF25B1700727A94 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ReservationDetails.strings; sourceTree = "<group>"; };
 		C40E6FBE1EF25BAE00727A94 /* ReservationDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReservationDetails.swift; path = ViewControllers/ReservationDetails.swift; sourceTree = "<group>"; };
 		C40E6FCB1EF25D4500727A94 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../Library/Developer/Xcode/DerivedData/Bookme-ccdotaxbgovmjcbjeathcgnvvwyd/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
-		C40E6FD81EF3626F00727A94 /* DateLabelCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateLabelCellView.swift; path = Components/DateLabelCellView.swift; sourceTree = "<group>"; };
 		C40E6FDA1EF36FC700727A94 /* DatePickerCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DatePickerCellView.swift; path = Components/DatePickerCellView.swift; sourceTree = "<group>"; };
 		C40E6FF01EF3793000727A94 /* TableViewHelper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TableViewHelper.framework; sourceTree = "<group>"; };
 		C40E6FF21EF3795A00727A94 /* Pods_Bookme.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Pods_Bookme.framework; sourceTree = "<group>"; };
@@ -98,11 +100,7 @@
 		C41464AA1EF0B8000069E9E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		C41464AD1EF0B8040069E9E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Login.strings; sourceTree = "<group>"; };
 		C41464AF1EF0B84C0069E9E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/AddEvent.strings; sourceTree = "<group>"; };
-		C41464B01EF1143B0069E9E6 /* PreferencesTextView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PreferencesTextView.xib; path = Components/PreferencesTextView.xib; sourceTree = "<group>"; };
-		C41464B21EF11CC90069E9E6 /* PreferencesTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreferencesTextView.swift; path = Components/PreferencesTextView.swift; sourceTree = "<group>"; };
 		C41464B41EF207520069E9E6 /* DateCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateCellView.swift; sourceTree = "<group>"; };
-		C41464B61EF2097E0069E9E6 /* BasicCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BasicCellView.xib; path = Components/BasicCellView.xib; sourceTree = "<group>"; };
-		C41464B81EF209F60069E9E6 /* BasicCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BasicCellView.swift; path = Components/BasicCellView.swift; sourceTree = "<group>"; };
 		C4A68D251EF3ADE700620B79 /* EmailCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmailCellView.swift; path = Components/EmailCellView.swift; sourceTree = "<group>"; };
 		C4AB3E221EED275700A1B5A9 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ViewControllers/LoginViewController.swift; sourceTree = "<group>"; };
 		C4AB3E241EEDB02700A1B5A9 /* ImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageExtension.swift; path = Extensions/ImageExtension.swift; sourceTree = "<group>"; };
@@ -159,6 +157,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0518955C0C3A4EFFD09D63F1 /* Pods_BookmeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +165,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67D130AB1D604F81CF604BEB /* Pods_BookmeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,13 +291,11 @@
 				C4AB3E2A1EEE0D6A00A1B5A9 /* AlertHelp.swift */,
 				C41464A51EEF9E610069E9E6 /* DateCellView.xib */,
 				C41464B41EF207520069E9E6 /* DateCellView.swift */,
-				C41464B01EF1143B0069E9E6 /* PreferencesTextView.xib */,
-				C41464B21EF11CC90069E9E6 /* PreferencesTextView.swift */,
-				C41464B61EF2097E0069E9E6 /* BasicCellView.xib */,
-				C41464B81EF209F60069E9E6 /* BasicCellView.swift */,
-				C40E6FD81EF3626F00727A94 /* DateLabelCellView.swift */,
 				C40E6FDA1EF36FC700727A94 /* DatePickerCellView.swift */,
 				C4A68D251EF3ADE700620B79 /* EmailCellView.swift */,
+				582BC5371EF44EBD0014F5BA /* NameCellView.swift */,
+				582BC5391EF450D50014F5BA /* PhoneCellView.swift */,
+				582BC53B1EF453800014F5BA /* PreferencesCellView.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -455,8 +453,6 @@
 				C40E6FB91EF25B1300727A94 /* ReservationDetails.storyboard in Resources */,
 				C4BB88661EECD45A0099F81E /* LaunchScreen.storyboard in Resources */,
 				C41464A61EEF9E610069E9E6 /* DateCellView.xib in Resources */,
-				C41464B11EF1143B0069E9E6 /* PreferencesTextView.xib in Resources */,
-				C41464B71EF2097E0069E9E6 /* BasicCellView.xib in Resources */,
 				C4AB3E391EEE4A6600A1B5A9 /* AddEvent.storyboard in Resources */,
 				C4AB3E2C1EEE0E6400A1B5A9 /* Localizable.strings in Resources */,
 				C4BB88631EECD45A0099F81E /* Assets.xcassets in Resources */,
@@ -629,20 +625,20 @@
 				C4AB3E291EEE0C6900A1B5A9 /* AlertViewController.swift in Sources */,
 				C4BB88611EECD45A0099F81E /* Bookme.xcdatamodeld in Sources */,
 				C4AB3E2B1EEE0D6A00A1B5A9 /* AlertHelp.swift in Sources */,
-				C41464B91EF209F60069E9E6 /* BasicCellView.swift in Sources */,
 				C4BB885B1EECD45A0099F81E /* HomeViewController.swift in Sources */,
 				C40E6FDB1EF36FC700727A94 /* DatePickerCellView.swift in Sources */,
 				C40E6FB51EF2319300727A94 /* TextFieldWithPadding.swift in Sources */,
 				C4AB3E271EEDF3DB00A1B5A9 /* TextFieldExtension.swift in Sources */,
-				C41464B31EF11CC90069E9E6 /* PreferencesTextView.swift in Sources */,
 				C4A68D261EF3ADE700620B79 /* EmailCellView.swift in Sources */,
 				C4AB3E361EEE458B00A1B5A9 /* AddEventViewController.swift in Sources */,
 				C40E6FBF1EF25BAE00727A94 /* ReservationDetails.swift in Sources */,
 				C4AB3E251EEDB02700A1B5A9 /* ImageExtension.swift in Sources */,
 				C4AB3E321EEE1B7700A1B5A9 /* ReservaionModel.swift in Sources */,
-				C40E6FD91EF3626F00727A94 /* DateLabelCellView.swift in Sources */,
+				582BC53C1EF453800014F5BA /* PreferencesCellView.swift in Sources */,
+				582BC5381EF44EBD0014F5BA /* NameCellView.swift in Sources */,
 				C41464B51EF207520069E9E6 /* DateCellView.swift in Sources */,
 				C4BB88591EECD45A0099F81E /* AppDelegate.swift in Sources */,
+				582BC53A1EF450D50014F5BA /* PhoneCellView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

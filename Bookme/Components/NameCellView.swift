@@ -1,19 +1,20 @@
 //
-//  EmailCellView.swift
+//  NameCellView.swift
 //  Bookme
 //
-//  Created by Janet Rivas on 6/16/17.
+//  Created by Janet Rivas-Mendoza (Contractor) on 6/16/17.
 //  Copyright © 2017 Janet Rivas. All rights reserved.
 //
 
 import UIKit
 
-class EmailCellView: UITableViewCell {
+class NameCellView: UITableViewCell {
     
-    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var nameTextFieldCell: UITextField!
     
-    //Editing Changed
-    @IBAction func editDidChange(_ sender: UITextField, forEvent event: UIEvent) {
+    //EditingChanged
+    @IBAction func nameTextField(_ sender: UITextField, forEvent event: UIEvent) {
+        
     }
     
     override func awakeFromNib() {
