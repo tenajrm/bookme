@@ -14,9 +14,6 @@ class PreferencesCellView: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-        //elf.setClean()
-        
     }
     
     func setClean() {
@@ -24,7 +21,6 @@ class PreferencesCellView: UITableViewCell {
             preferencesTextView.text = ""
         }
     }
-
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

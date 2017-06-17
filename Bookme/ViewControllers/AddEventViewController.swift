@@ -24,9 +24,10 @@ class AddEventViewController: UIViewController, UITableViewDataSource, UITableVi
         for cell in cells {
             // get data from cells
             if(cell.reuseIdentifier == "selecDateCell"){
-                let dateCellText = cell
-                if dateCellText.detailTextLabel?.text != "" {
-                    reservationObj.reservationDate = TimestampHelper.stringToDate(timestamp: (dateCellText.detailTextLabel?.text)!)
+                
+                let timestamp = cell.detailTextLabel?.text
+                if timestamp != ""{
+                    reservationObj.reservationDate = TimestampHelper.stringToDate(timestamp: timestamp!)
                 } else {
                     reservationObj.reservationDate = Date()
                 }
@@ -46,9 +47,16 @@ class AddEventViewController: UIViewController, UITableViewDataSource, UITableVi
             if(cell.reuseIdentifier == "phoneCell"){
                 let phoneCellText = cell as? PhoneCellView
                 //No optional value
-                let phone : String = phoneCellText?.phoneTextCellView.text ?? "0"
-                reservationObj.phoneNumber = Int(phone)!
-                print("\(String(describing: phoneCellText?.phoneTextCellView.text))")
+                if (phoneCellText?.phoneTextCellView.text == "") {
+                    //alert 
+                    AlertHelp.showAlert(title:  NSLocalizedString("titleAlert", comment: "title"), message:  "Please provide contact phone")
+                    return
+                } else {
+                     let phone : String = (phoneCellText?.phoneTextCellView.text)!
+                     reservationObj.phoneNumber = Int(phone)!
+                    
+                }
+                
             }
             
             if(cell.reuseIdentifier == "specialRCell"){
@@ -68,7 +76,23 @@ class AddEventViewController: UIViewController, UITableViewDataSource, UITableVi
         self.performSegue(withIdentifier: "home", sender: nil)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        
+        let indexPath = IndexPath(row: 0, section: 0)
+        let cellLabel = self.tableView.cellForRow(at: indexPath)
+        let dateString = TimestampHelper.getCurrentTimestamp(timestamp: Date())
+        cellLabel?.detailTextLabel?.isHidden = false
+        cellLabel?.detailTextLabel?.text = dateString
+        cellLabel?.detailTextLabel?.textColor = UIColor.black
+        self.tableView.reloadData()
+        
+    }
+
     override func viewDidLoad() {
+         super.viewDidLoad()
+        
         helper = TableViewHelper(tableView:tableView)
         
         helper.addCell(0, cell: tableView.dequeueReusableCell(withIdentifier: "selecDateCell")! as UITableViewCell, name: "selecDateCell")
@@ -78,10 +102,10 @@ class AddEventViewController: UIViewController, UITableViewDataSource, UITableVi
         helper.addCell(1, cell: tableView.dequeueReusableCell(withIdentifier: "phoneCell")! as UITableViewCell, name: "phoneCell")
         helper.addCell(1, cell: tableView.dequeueReusableCell(withIdentifier: "emailCell")! as UITableViewCell, name: "emailCell")
         
-        helper.addCell(3, cell: tableView.dequeueReusableCell(withIdentifier: "specialRCell")! as UITableViewCell, name: "specialRCell")
+        helper.addCell(2, cell: tableView.dequeueReusableCell(withIdentifier: "specialRCell")! as UITableViewCell, name: "specialRCell")
         
         helper.hideCell("datePickerCell")
-       
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -90,7 +114,6 @@ class AddEventViewController: UIViewController, UITableViewDataSource, UITableVi
             backItem.title = "Log Out"
             navigationItem.backBarButtonItem = backItem
             _ = segue.destination as! HomeViewController
-           
         }
     }
 
@@ -118,6 +141,7 @@ class AddEventViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
         return helper.cellForRowAtIndexPath(indexPath)
     }
     
@@ -133,21 +157,14 @@ class AddEventViewController: UIViewController, UITableViewDataSource, UITableVi
                     //Hidde the picker
                     helper?.hideCell("datePickerCell")
                     
-                    let dateFormatter = DateFormatter()
-                    dateFormatter.dateStyle = DateFormatter.Style.medium
-                    dateFormatter.timeStyle = DateFormatter.Style.medium
-                    
                     let cellDatePicker = tableView.dequeueReusableCell(withIdentifier: "datePickerCell") as? DatePickerCellView
                     
                     let dataPicker = cellDatePicker?.datePickerCom
                     let cellLabel = tableView.cellForRow(at: indexPath)!
-                    
                     let dateString = TimestampHelper.getCurrentTimestamp(timestamp: (dataPicker?.date)!)
-                    cellLabel.detailTextLabel?.isHidden = false
                     cellLabel.detailTextLabel?.text = dateString
-                    cellLabel.detailTextLabel?.textColor = UIColor.black
                     
-                }
+            }
                 
             case "datePickerCell":
                 helper?.hideCell(name)
