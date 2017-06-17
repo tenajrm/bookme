@@ -11,6 +11,7 @@
 		582BC5381EF44EBD0014F5BA /* NameCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582BC5371EF44EBD0014F5BA /* NameCellView.swift */; };
 		582BC53A1EF450D50014F5BA /* PhoneCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582BC5391EF450D50014F5BA /* PhoneCellView.swift */; };
 		582BC53C1EF453800014F5BA /* PreferencesCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582BC53B1EF453800014F5BA /* PreferencesCellView.swift */; };
+		582BC53E1EF46E5B0014F5BA /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582BC53D1EF46E5B0014F5BA /* RealmService.swift */; };
 		67D130AB1D604F81CF604BEB /* Pods_BookmeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C40E6FF61EF3797B00727A94 /* Pods_BookmeUITests.framework */; };
 		C40E6FB51EF2319300727A94 /* TextFieldWithPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40E6FB41EF2319300727A94 /* TextFieldWithPadding.swift */; };
 		C40E6FB91EF25B1300727A94 /* ReservationDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C40E6FBB1EF25B1300727A94 /* ReservationDetails.storyboard */; };
@@ -83,6 +84,7 @@
 		582BC5371EF44EBD0014F5BA /* NameCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NameCellView.swift; path = Components/NameCellView.swift; sourceTree = "<group>"; };
 		582BC5391EF450D50014F5BA /* PhoneCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhoneCellView.swift; path = Components/PhoneCellView.swift; sourceTree = "<group>"; };
 		582BC53B1EF453800014F5BA /* PreferencesCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreferencesCellView.swift; path = Components/PreferencesCellView.swift; sourceTree = "<group>"; };
+		582BC53D1EF46E5B0014F5BA /* RealmService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RealmService.swift; path = Services/RealmService.swift; sourceTree = "<group>"; };
 		7D711A5368D3B923F52C1190 /* Pods-BookmeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookmeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookmeUITests/Pods-BookmeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C40E6FB41EF2319300727A94 /* TextFieldWithPadding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextFieldWithPadding.swift; path = Utilities/TextFieldWithPadding.swift; sourceTree = "<group>"; };
 		C40E6FBA1EF25B1300727A94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ReservationDetails.storyboard; sourceTree = "<group>"; };
@@ -303,6 +305,7 @@
 		C4BB888E1EECDAAA0099F81E /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				582BC53D1EF46E5B0014F5BA /* RealmService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -639,6 +642,7 @@
 				C41464B51EF207520069E9E6 /* DateCellView.swift in Sources */,
 				C4BB88591EECD45A0099F81E /* AppDelegate.swift in Sources */,
 				582BC53A1EF450D50014F5BA /* PhoneCellView.swift in Sources */,
+				582BC53E1EF46E5B0014F5BA /* RealmService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

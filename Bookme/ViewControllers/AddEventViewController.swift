@@ -7,7 +7,6 @@
 //
 
 import UIKit
-//import RealmSwift
 import Foundation
 import TableViewHelper
 
@@ -19,36 +18,54 @@ class AddEventViewController: UIViewController, UITableViewDataSource, UITableVi
     
     @IBAction func reserveAction(_ sender: Any) {
         
-        let cells = self.tableView.visibleCells 
+        let reservationObj = ReservationModel()
+        let cells = self.tableView.visibleCells
         
         for cell in cells {
             // get data from cells
-            
             if(cell.reuseIdentifier == "selecDateCell"){
                 let dateCellText = cell
-                print("Date \(String(describing: dateCellText.detailTextLabel?.text)))")
+                if dateCellText.detailTextLabel?.text != "" {
+                    reservationObj.reservationDate = TimestampHelper.stringToDate(timestamp: (dateCellText.detailTextLabel?.text)!)
+                } else {
+                    reservationObj.reservationDate = Date()
+                }
             }
             
             if(cell.reuseIdentifier == "emailCell"){
                 let emailCellText = cell as? EmailCellView
-                print("\(String(describing: emailCellText?.emailTextField.text))")
+                reservationObj.email = (emailCellText?.emailTextField.text)!
             }
             
             if(cell.reuseIdentifier == "nameCell"){
                 let nameCellText = cell as? NameCellView
+                reservationObj.name = (nameCellText?.nameTextFieldCell.text)!
                 print("\(String(describing: nameCellText?.nameTextFieldCell.text))")
             }
             
             if(cell.reuseIdentifier == "phoneCell"){
                 let phoneCellText = cell as? PhoneCellView
+                //No optional value
+                let phone : String = phoneCellText?.phoneTextCellView.text ?? "0"
+                reservationObj.phoneNumber = Int(phone)!
                 print("\(String(describing: phoneCellText?.phoneTextCellView.text))")
             }
             
             if(cell.reuseIdentifier == "specialRCell"){
                 let preferencesCellText = cell as? PreferencesCellView
+                reservationObj.specialRequest = (preferencesCellText?.preferencesTextView.text)!
                 print("\(String(describing: preferencesCellText?.preferencesTextView.text))")
             }
         }
+        
+       
+        reservationObj.isCancelled = false
+        reservationObj.isFull = false
+        reservationObj.isExpired = false
+        
+        RealmService.writeObjects(obj: reservationObj);
+        //Sending back 
+        self.performSegue(withIdentifier: "home", sender: nil)
     }
     
     override func viewDidLoad() {
@@ -68,11 +85,12 @@ class AddEventViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "reservationDetails" {
+        if segue.identifier == "home" {
             let backItem = UIBarButtonItem()
-            backItem.title = "Back"
+            backItem.title = "Log Out"
             navigationItem.backBarButtonItem = backItem
-            //_ = segue.destination as! ReservationDetails
+            _ = segue.destination as! HomeViewController
+           
         }
     }
 

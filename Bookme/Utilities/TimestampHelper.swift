@@ -23,5 +23,17 @@ class TimestampHelper
         
     }
     
+    static func  stringToDate(timestamp : String) -> Date {
+        let formatter = DateFormatter()
+        formatter.timeZone = TimeZone.ReferenceType.system
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        
+        return formatter.date(from:timestamp)!
+        
+    }
+
+    
+    
+    
     
 }

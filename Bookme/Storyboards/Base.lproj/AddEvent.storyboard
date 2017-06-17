@@ -230,17 +230,17 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="W67-iX-kJN" id="pRQ-l2-Uru"/>
-                        <segue destination="5Co-h0-MEl" kind="show" identifier="reservationDetails" id="RmV-er-WPd"/>
+                        <segue destination="5Co-h0-MEl" kind="show" identifier="home" id="RmV-er-WPd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EpE-mP-vDI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-156" y="80.50974512743629"/>
         </scene>
-        <!--ReservationDetails-->
+        <!--HomeVC-->
         <scene sceneID="IUq-5O-fJx">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="reservationDetails" storyboardName="ReservationDetails" id="5Co-h0-MEl" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="homeVC" storyboardName="Home" referencedIdentifier="HomeVC" id="5Co-h0-MEl" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nhn-KC-ctL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="671" y="-2"/>

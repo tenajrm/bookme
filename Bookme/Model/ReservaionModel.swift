@@ -13,31 +13,25 @@ import RealmSwift
 class ReservationModel: Object {
     
     //Date no optional
-    dynamic var device = ""
-    dynamic var os = ""
-    dynamic var manufacturer = ""
-    dynamic var createdOn = Date()
-    dynamic var id = 0
-    dynamic var isCheckedOut = false
-    //isRemoteDevice means that this device is comming from the backend and is static data
-    dynamic var isRemoteDevice = false
-    //isSync means that this device was susccessful sent to the backend and it does not need to Sync
-    dynamic var isSync = false
-    
-    
-    //Optional values
-    dynamic var lastCheckedOutBy: String? = nil
-    dynamic var lastCheckedOutDate: Date? = nil
+    dynamic var name = ""
+    dynamic var email = ""
+    dynamic var specialRequest = ""
+    dynamic var phoneNumber = 0
+    dynamic var reservationDate = Date()
+    dynamic var isFull = false
+    dynamic var isExpired = false
+    dynamic var isCancelled = false
+    dynamic var guessNumber = 1
     
     override static func indexedProperties() -> [String] {
-        return ["device"]
+        return ["email", "name" ]
     }
     
     override static func primaryKey() -> String? {
-        return "id"
+        return "phoneNumber"
     }
     
-    //Todo adding device model mapping object
+    //TODO adding device model mapping object
     
 }
 
