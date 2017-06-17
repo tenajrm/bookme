@@ -139,6 +139,11 @@
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                                    <connections>
+                                                        <action selector="editEnd:" destination="6Hn-4G-vx2" eventType="editingDidEnd" id="Z6v-0X-fKg"/>
+                                                        <action selector="editingChange:" destination="6Hn-4G-vx2" eventType="editingChanged" id="h3I-E7-ee0"/>
+                                                        <action selector="valueChange:forEvent:" destination="6Hn-4G-vx2" eventType="valueChanged" id="1DY-x1-kjP"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>

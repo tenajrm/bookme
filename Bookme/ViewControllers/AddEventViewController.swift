@@ -19,29 +19,45 @@ class AddEventViewController: UIViewController, UITableViewDataSource, UITableVi
     @IBAction func reserveAction(_ sender: Any) {
         
         let reservationObj = ReservationModel()
+        
         let cells = self.tableView.visibleCells
+    
         
         for cell in cells {
             // get data from cells
             if(cell.reuseIdentifier == "selecDateCell"){
                 
                 let timestamp = cell.detailTextLabel?.text
-                if timestamp != ""{
-                    reservationObj.reservationDate = TimestampHelper.stringToDate(timestamp: timestamp!)
+                if timestamp != "" {
+                    reservationObj.reservationDate =  TimestampHelper.stringToDate(timestamp: timestamp!)
                 } else {
-                    reservationObj.reservationDate = Date()
+                    reservationObj.reservationDate =  Date()
                 }
             }
             
             if(cell.reuseIdentifier == "emailCell"){
                 let emailCellText = cell as? EmailCellView
-                reservationObj.email = (emailCellText?.emailTextField.text)!
+                
+                if emailCellText?.emailTextField.text == "" {
+                    AlertHelp.showAlert(title:  NSLocalizedString("titleAlert", comment: "title"), message: NSLocalizedString("emailRequired", comment: "emailRequired") )
+                    return
+                
+                } else {
+                    reservationObj.email = (emailCellText?.emailTextField.text)!
+                }
+                
             }
             
             if(cell.reuseIdentifier == "nameCell"){
                 let nameCellText = cell as? NameCellView
-                reservationObj.name = (nameCellText?.nameTextFieldCell.text)!
-                print("\(String(describing: nameCellText?.nameTextFieldCell.text))")
+                if (nameCellText?.nameTextFieldCell.text == "") {
+                    //alert
+                    AlertHelp.showAlert(title:  NSLocalizedString("titleAlert", comment: "title"), message: NSLocalizedString("messageName", comment: "nameEmpty") )
+                    return
+                } else {
+                    reservationObj.name = (nameCellText?.nameTextFieldCell.text)!
+                    print("\(String(describing: nameCellText?.nameTextFieldCell.text))")
+                }
             }
             
             if(cell.reuseIdentifier == "phoneCell"){
@@ -49,12 +65,17 @@ class AddEventViewController: UIViewController, UITableViewDataSource, UITableVi
                 //No optional value
                 if (phoneCellText?.phoneTextCellView.text == "") {
                     //alert 
-                    AlertHelp.showAlert(title:  NSLocalizedString("titleAlert", comment: "title"), message:  "Please provide contact phone")
+                    AlertHelp.showAlert(title:  NSLocalizedString("titleAlert", comment: "title"), message: NSLocalizedString("messagePhone", comment: "phoneempty") )
                     return
                 } else {
-                     let phone : String = (phoneCellText?.phoneTextCellView.text)!
-                     reservationObj.phoneNumber = Int(phone)!
+                    let phone : String = (phoneCellText?.phoneTextCellView.text)!
+                    let isAllNumber = phone.components(separatedBy: CharacterSet.decimalDigits.inverted).joined(separator: "")
                     
+                    guard phone.characters.count == isAllNumber.characters.count else {
+                        AlertHelp.showAlert(title:  NSLocalizedString("titleAlert", comment: "title"), message: NSLocalizedString("messagePhoneError", comment: "phoneempty"))
+                        return
+                    }
+                    reservationObj.phoneNumber = Int(phone)!
                 }
                 
             }
@@ -94,6 +115,7 @@ class AddEventViewController: UIViewController, UITableViewDataSource, UITableVi
          super.viewDidLoad()
         
         helper = TableViewHelper(tableView:tableView)
+        
         
         helper.addCell(0, cell: tableView.dequeueReusableCell(withIdentifier: "selecDateCell")! as UITableViewCell, name: "selecDateCell")
         helper.addCell(0, cell: tableView.dequeueReusableCell(withIdentifier: "datePickerCell")! as UITableViewCell, name: "datePickerCell")
@@ -172,10 +194,10 @@ class AddEventViewController: UIViewController, UITableViewDataSource, UITableVi
             case "specialRCell":
                 
                  let cellPreferences = tableView.cellForRow(at: indexPath) as? PreferencesCellView
-                 if(cellPreferences?.preferencesTextView.text == "Special Request") {
+                 if(cellPreferences?.preferencesTextView.text == NSLocalizedString("specialRequest", comment: "specialRequest")) {
                     cellPreferences?.preferencesTextView.text = ""
                  } else if (cellPreferences?.preferencesTextView.text == ""){
-                    cellPreferences?.preferencesTextView.text = "Special Request"
+                    cellPreferences?.preferencesTextView.text =  NSLocalizedString("specialRequest", comment: "specialRequest")
                  }
 
                 break
@@ -193,7 +215,7 @@ class AddEventViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         
         if section == 1 {
-            return "Contact Information"
+            return NSLocalizedString("contactInfo", comment: "contact info")
         }
         return ""
         

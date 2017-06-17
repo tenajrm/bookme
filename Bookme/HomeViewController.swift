@@ -23,6 +23,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.performSegue(withIdentifier: "addEvent", sender: nil)
     }
     
+    @IBAction func logOut(_ sender: Any) {
+        _ = self.navigationController?.popViewController(animated: true)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //Navigation Bar
@@ -43,6 +48,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         reservationTableView.delegate = self
         reservationTableView.dataSource = self
         
+    }
+    
+    func back(sender: UIBarButtonItem) {
+        
+        _ = self.navigationController?.popViewController(animated: true)
     }
     
     
@@ -71,9 +81,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     // method to run when table view cell is tapped
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("You tapped cell number \(indexPath.row).")
-        let cell = tableView.cellForRow(at: indexPath) as! ReservationTableViewCell
-        cell.backgroundColor = UIColor.clear
+       /* let cell = tableView.cellForRow(at: indexPath) as! ReservationTableViewCell
+        cell.backgroundColor = UIColor.lightGray*/
         
     }
     
@@ -91,11 +100,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         if editingStyle == .delete {
             
-            let removeAlert = UIAlertController(title: NSLocalizedString("BookMe", comment: "title") , message: "Are you shure you want to cancel and remove the reservation?"  , preferredStyle: UIAlertControllerStyle.alert)
+            let removeAlert = UIAlertController(title: NSLocalizedString("titleAlert", comment: "title") , message: NSLocalizedString("messageDelete", comment: "message"), preferredStyle: UIAlertControllerStyle.alert)
             
-                removeAlert.addAction(UIAlertAction(title:  NSLocalizedString("Delete", comment: "Delete") , style: .destructive, handler: { (action: UIAlertAction!) in
+                removeAlert.addAction(UIAlertAction(title:  NSLocalizedString("alertDelete", comment: "Delete") , style: .destructive, handler: { (action: UIAlertAction!) in
                 
-                RealmService.removeObject(phoneCell : self.reservarionListData[indexPath.row])
+                RealmService.removeObject(obj : self.reservarionListData[indexPath.row])
                 
                 // remove the item from the data model
                 self.reservarionListData.remove(at: indexPath.row)
@@ -105,7 +114,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                 
             }))
             
-            removeAlert.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: "Cancel") , style: .cancel, handler: { (action: UIAlertAction!) in
+            removeAlert.addAction(UIAlertAction(title: NSLocalizedString("alertCancel", comment: "Cancel") , style: .cancel, handler: { (action: UIAlertAction!) in
                 //don't do nothing
             }))
             
@@ -122,10 +131,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         let reservation : ReservationModel = self.reservarionListData[indexPath.row]
         let name = reservation["name"]
         
-        let timestamp = TimestampHelper.getCurrentTimestamp(timestamp: reservation["reservationDate"] as! Date)
-
+        let timestamp = reservation["reservationDate"] as! Date
+        
         reservationCell.nameLabel.text = name as? String
-        reservationCell.timestampLabel.text = timestamp
+        reservationCell.timestampLabel.text =  TimestampHelper.getCurrentTimestamp(timestamp: timestamp )
         let isFull = reservation["isFull"] as! Bool
         let isExpired = reservation["isExpired"] as! Bool
         let isCancelled = reservation["isCancelled"] as! Bool

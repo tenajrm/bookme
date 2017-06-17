@@ -90,7 +90,6 @@
 		7D711A5368D3B923F52C1190 /* Pods-BookmeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookmeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookmeUITests/Pods-BookmeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C40E6FB41EF2319300727A94 /* TextFieldWithPadding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextFieldWithPadding.swift; path = Utilities/TextFieldWithPadding.swift; sourceTree = "<group>"; };
 		C40E6FBA1EF25B1300727A94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ReservationDetails.storyboard; sourceTree = "<group>"; };
-		C40E6FBD1EF25B1700727A94 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ReservationDetails.strings; sourceTree = "<group>"; };
 		C40E6FBE1EF25BAE00727A94 /* ReservationDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReservationDetails.swift; path = ViewControllers/ReservationDetails.swift; sourceTree = "<group>"; };
 		C40E6FCB1EF25D4500727A94 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../Library/Developer/Xcode/DerivedData/Bookme-ccdotaxbgovmjcbjeathcgnvvwyd/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 		C40E6FDA1EF36FC700727A94 /* DatePickerCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DatePickerCellView.swift; path = Components/DatePickerCellView.swift; sourceTree = "<group>"; };
@@ -101,8 +100,6 @@
 		C40E6FF81EF3799D00727A94 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		C40E6FFA1EF379A700727A94 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		C41464AA1EF0B8000069E9E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
-		C41464AD1EF0B8040069E9E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Login.strings; sourceTree = "<group>"; };
-		C41464AF1EF0B84C0069E9E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/AddEvent.strings; sourceTree = "<group>"; };
 		C4A68D251EF3ADE700620B79 /* EmailCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmailCellView.swift; path = Components/EmailCellView.swift; sourceTree = "<group>"; };
 		C4A68D271EF4DC0A00620B79 /* Results.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Results.swift; path = Extensions/Results.swift; sourceTree = "<group>"; };
 		C4A68D291EF4EAB500620B79 /* ReservationCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ReservationCellView.xib; path = Components/ReservationCellView.xib; sourceTree = "<group>"; };
@@ -214,10 +211,10 @@
 			children = (
 				C4BB888F1EECDAC20099F81E /* Utilities */,
 				C4BB888E1EECDAAA0099F81E /* Services */,
+				C4BB888A1EECDA660099F81E /* Model */,
 				C4BB888D1EECDA9C0099F81E /* Components */,
 				C4BB888C1EECDA8E0099F81E /* Storyboards */,
 				C4BB888B1EECDA6F0099F81E /* ViewControllers */,
-				C4BB888A1EECDA660099F81E /* Model */,
 				C4BB88891EECDA510099F81E /* Extensions */,
 				C4BB88581EECD45A0099F81E /* AppDelegate.swift */,
 				C4BB88621EECD45A0099F81E /* Assets.xcassets */,
@@ -686,7 +683,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				C40E6FBA1EF25B1300727A94 /* Base */,
-				C40E6FBD1EF25B1700727A94 /* en */,
 			);
 			name = ReservationDetails.storyboard;
 			path = Storyboards;
@@ -696,7 +692,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				C41464AA1EF0B8000069E9E6 /* Base */,
-				C41464AD1EF0B8040069E9E6 /* en */,
 			);
 			name = Login.storyboard;
 			path = Storyboards;
@@ -732,7 +727,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				C4AB3E3A1EEE4A6600A1B5A9 /* Base */,
-				C41464AF1EF0B84C0069E9E6 /* en */,
 			);
 			name = AddEvent.storyboard;
 			path = Storyboards;

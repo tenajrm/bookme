@@ -28,9 +28,9 @@ class ReservationModel: Object {
         return ["email", "name" ]
     }
     
-    override static func primaryKey() -> String? {
+    /*override static func primaryKey() -> String? {
         return "phoneNumber"
-    }
+    }*/
     
     //TODO adding device model mapping object
     

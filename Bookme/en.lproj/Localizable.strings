@@ -5,3 +5,27 @@
   Created by Janet Rivas on 6/10/17.
   Copyright © 2017 Janet Rivas. All rights reserved.
 */
+titleAlert = "BookMe";
+
+//Warnings
+noTouchID = "This device does not have a TouchID sensor.";
+
+contactInfo = "Contact Information";
+
+
+//messages
+messageDelete = "Are you shure you want to cancel and remove the reservation?";
+messagePhone = "Please provide contact phone";
+messagePhoneError = "The phone number is invalid.";
+messageName  = "Please provide guess name.";
+contactInfo =  "Contact Information";
+specialRequest = "Special Request";
+
+emailRequired = "The email is required";
+
+//General
+alertOk = "OK";
+alertCancel = "Cancel";
+alertStop = "Stop";
+alertDelete = "Delete";
+alertSubmit = "Submit";

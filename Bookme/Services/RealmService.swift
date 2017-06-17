@@ -49,13 +49,16 @@ class RealmService
         
     }
     
-    static func removeObject(phoneCell : ReservationModel) {
+    static func removeObject(obj : ReservationModel) {
         
         // Get the default Realm
         let realm = try! Realm()
-        let predicate = "phoneNumber = \(phoneCell.phoneNumber)"
+        print(" \(obj.email)")
+        
+        
+        //let predicate = "phoneNumber = \(obj.phoneNumber)"
         // Query Realm for Device
-        let reservation = realm.objects(ReservationModel.self).filter(predicate)
+        let reservation = realm.objects(ReservationModel.self).filter("reservationDate == %@", obj.reservationDate)
         print("reservation query : \(reservation)")
         
         try? realm.write {

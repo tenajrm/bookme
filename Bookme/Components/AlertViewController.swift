@@ -44,16 +44,7 @@ class AlertViewController {
         // Cancel button
         let cancel = UIAlertAction(title: NSLocalizedString("alertCancel", comment: "cancel"), style: .destructive, handler: { (action) -> Void in })
         
-        
-        // Add 1 textField and cutomize it
-       /* alert.addTextField { (textField: UITextField) in
-            textField.keyboardAppearance = .dark
-            textField.keyboardType = .default
-            textField.autocorrectionType = .default
-            textField.placeholder = NSLocalizedString("userNamePlaceHolder", comment: "userName")
-            textField.clearButtonMode = .whileEditing
-        }*/
-        
+    
         // Add action buttons and present the Alert
         alert.addAction(submitAction)
         alert.addAction(cancel)

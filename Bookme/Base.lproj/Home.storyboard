@@ -40,7 +40,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </tableView>
                     <navigationItem key="navigationItem" title="Bookings" id="fJd-mV-SNG" userLabel="Bookings">
-                        <barButtonItem key="rightBarButtonItem" title="Add Event" id="6WZ-CF-YtA">
+                        <barButtonItem key="leftBarButtonItem" title="Log Out" id="qUF-pf-ghz">
+                            <connections>
+                                <action selector="logOut:" destination="BYZ-38-t0r" id="uBo-zG-o1X"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="6WZ-CF-YtA">
                             <connections>
                                 <action selector="addEvent:" destination="BYZ-38-t0r" id="7NS-H7-egJ"/>
                             </connections>
