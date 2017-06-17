@@ -24,26 +24,28 @@
 		C40E6FF71EF3797B00727A94 /* Pods_BookmeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C40E6FF61EF3797B00727A94 /* Pods_BookmeUITests.framework */; };
 		C40E6FF91EF3799D00727A94 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C40E6FF81EF3799D00727A94 /* Realm.framework */; };
 		C40E6FFB1EF379A700727A94 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C40E6FFA1EF379A700727A94 /* RealmSwift.framework */; };
-		C41464A61EEF9E610069E9E6 /* DateCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C41464A51EEF9E610069E9E6 /* DateCellView.xib */; };
 		C41464A91EF0B8000069E9E6 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C41464AB1EF0B8000069E9E6 /* Login.storyboard */; };
-		C41464B51EF207520069E9E6 /* DateCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41464B41EF207520069E9E6 /* DateCellView.swift */; };
 		C4A68D261EF3ADE700620B79 /* EmailCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A68D251EF3ADE700620B79 /* EmailCellView.swift */; };
+		C4A68D281EF4DC0A00620B79 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A68D271EF4DC0A00620B79 /* Results.swift */; };
+		C4A68D2A1EF4EAB500620B79 /* ReservationCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4A68D291EF4EAB500620B79 /* ReservationCellView.xib */; };
+		C4A68D2C1EF4EADB00620B79 /* ReservationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A68D2B1EF4EADB00620B79 /* ReservationTableViewCell.swift */; };
+		C4A68D2E1EF5085600620B79 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A68D2D1EF5085600620B79 /* Constants.swift */; };
+		C4A68D371EF51C5B00620B79 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4A68D351EF51C5B00620B79 /* Home.storyboard */; };
+		C4A68D3A1EF51C7900620B79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4A68D381EF51C7900620B79 /* LaunchScreen.storyboard */; };
 		C4AB3E231EED275700A1B5A9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AB3E221EED275700A1B5A9 /* LoginViewController.swift */; };
 		C4AB3E251EEDB02700A1B5A9 /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AB3E241EEDB02700A1B5A9 /* ImageExtension.swift */; };
 		C4AB3E271EEDF3DB00A1B5A9 /* TextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AB3E261EEDF3DA00A1B5A9 /* TextFieldExtension.swift */; };
 		C4AB3E291EEE0C6900A1B5A9 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AB3E281EEE0C6900A1B5A9 /* AlertViewController.swift */; };
 		C4AB3E2B1EEE0D6A00A1B5A9 /* AlertHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AB3E2A1EEE0D6A00A1B5A9 /* AlertHelp.swift */; };
 		C4AB3E2C1EEE0E6400A1B5A9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4AB3E2E1EEE0E6400A1B5A9 /* Localizable.strings */; };
-		C4AB3E321EEE1B7700A1B5A9 /* ReservaionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AB3E311EEE1B7700A1B5A9 /* ReservaionModel.swift */; };
+		C4AB3E321EEE1B7700A1B5A9 /* ReservationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AB3E311EEE1B7700A1B5A9 /* ReservationModel.swift */; };
 		C4AB3E341EEE44CE00A1B5A9 /* TimestampHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AB3E331EEE44CE00A1B5A9 /* TimestampHelper.swift */; };
 		C4AB3E361EEE458B00A1B5A9 /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AB3E351EEE458B00A1B5A9 /* AddEventViewController.swift */; };
 		C4AB3E391EEE4A6600A1B5A9 /* AddEvent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4AB3E3B1EEE4A6600A1B5A9 /* AddEvent.storyboard */; };
 		C4BB88591EECD45A0099F81E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BB88581EECD45A0099F81E /* AppDelegate.swift */; };
 		C4BB885B1EECD45A0099F81E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BB885A1EECD45A0099F81E /* HomeViewController.swift */; };
-		C4BB885E1EECD45A0099F81E /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4BB885C1EECD45A0099F81E /* Home.storyboard */; };
 		C4BB88611EECD45A0099F81E /* Bookme.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C4BB885F1EECD45A0099F81E /* Bookme.xcdatamodeld */; };
 		C4BB88631EECD45A0099F81E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4BB88621EECD45A0099F81E /* Assets.xcassets */; };
-		C4BB88661EECD45A0099F81E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4BB88641EECD45A0099F81E /* LaunchScreen.storyboard */; };
 		C4BB88711EECD45A0099F81E /* BookmeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BB88701EECD45A0099F81E /* BookmeTests.swift */; };
 		C4BB887C1EECD45A0099F81E /* BookmeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BB887B1EECD45A0099F81E /* BookmeUITests.swift */; };
 /* End PBXBuildFile section */
@@ -98,12 +100,16 @@
 		C40E6FF61EF3797B00727A94 /* Pods_BookmeUITests.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Pods_BookmeUITests.framework; sourceTree = "<group>"; };
 		C40E6FF81EF3799D00727A94 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		C40E6FFA1EF379A700727A94 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
-		C41464A51EEF9E610069E9E6 /* DateCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DateCellView.xib; path = Components/DateCellView.xib; sourceTree = "<group>"; };
 		C41464AA1EF0B8000069E9E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		C41464AD1EF0B8040069E9E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Login.strings; sourceTree = "<group>"; };
 		C41464AF1EF0B84C0069E9E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/AddEvent.strings; sourceTree = "<group>"; };
-		C41464B41EF207520069E9E6 /* DateCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateCellView.swift; sourceTree = "<group>"; };
 		C4A68D251EF3ADE700620B79 /* EmailCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmailCellView.swift; path = Components/EmailCellView.swift; sourceTree = "<group>"; };
+		C4A68D271EF4DC0A00620B79 /* Results.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Results.swift; path = Extensions/Results.swift; sourceTree = "<group>"; };
+		C4A68D291EF4EAB500620B79 /* ReservationCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ReservationCellView.xib; path = Components/ReservationCellView.xib; sourceTree = "<group>"; };
+		C4A68D2B1EF4EADB00620B79 /* ReservationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReservationTableViewCell.swift; path = Components/ReservationTableViewCell.swift; sourceTree = "<group>"; };
+		C4A68D2D1EF5085600620B79 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Utilities/Constants.swift; sourceTree = "<group>"; };
+		C4A68D361EF51C5B00620B79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
+		C4A68D391EF51C7900620B79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4AB3E221EED275700A1B5A9 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ViewControllers/LoginViewController.swift; sourceTree = "<group>"; };
 		C4AB3E241EEDB02700A1B5A9 /* ImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageExtension.swift; path = Extensions/ImageExtension.swift; sourceTree = "<group>"; };
 		C4AB3E261EEDF3DA00A1B5A9 /* TextFieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextFieldExtension.swift; path = Extensions/TextFieldExtension.swift; sourceTree = "<group>"; };
@@ -112,17 +118,15 @@
 		C4AB3E2D1EEE0E6400A1B5A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C4AB3E2F1EEE0E7200A1B5A9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C4AB3E301EEE0E7400A1B5A9 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
-		C4AB3E311EEE1B7700A1B5A9 /* ReservaionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReservaionModel.swift; path = Model/ReservaionModel.swift; sourceTree = "<group>"; };
+		C4AB3E311EEE1B7700A1B5A9 /* ReservationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReservationModel.swift; path = Model/ReservationModel.swift; sourceTree = "<group>"; };
 		C4AB3E331EEE44CE00A1B5A9 /* TimestampHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimestampHelper.swift; path = Utilities/TimestampHelper.swift; sourceTree = "<group>"; };
 		C4AB3E351EEE458B00A1B5A9 /* AddEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddEventViewController.swift; path = ViewControllers/AddEventViewController.swift; sourceTree = "<group>"; };
 		C4AB3E3A1EEE4A6600A1B5A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/AddEvent.storyboard; sourceTree = "<group>"; };
 		C4BB88551EECD45A0099F81E /* Bookme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bookme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4BB88581EECD45A0099F81E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4BB885A1EECD45A0099F81E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		C4BB885D1EECD45A0099F81E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		C4BB88601EECD45A0099F81E /* Bookme.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bookme.xcdatamodel; sourceTree = "<group>"; };
 		C4BB88621EECD45A0099F81E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C4BB88651EECD45A0099F81E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4BB88671EECD45A0099F81E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4BB886C1EECD45A0099F81E /* BookmeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookmeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4BB88701EECD45A0099F81E /* BookmeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmeTests.swift; sourceTree = "<group>"; };
@@ -131,10 +135,6 @@
 		C4BB887B1EECD45A0099F81E /* BookmeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmeUITests.swift; sourceTree = "<group>"; };
 		C4BB887D1EECD45A0099F81E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4BB88901EECE8E40099F81E /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
-		C4BB88981EECF2E20099F81E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Home.strings; sourceTree = "<group>"; };
-		C4BB88991EECF2ED0099F81E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Home.strings; sourceTree = "<group>"; };
-		C4BB889A1EECF2F40099F81E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		C4BB889B1EECF2F70099F81E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		C9CD34BF2B95D2CA30D219C4 /* Pods-BookmeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookmeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BookmeTests/Pods-BookmeTests.release.xcconfig"; sourceTree = "<group>"; };
 		D8BE6BC02CCB061DFF866127 /* Pods-Bookme.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bookme.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bookme/Pods-Bookme.debug.xcconfig"; sourceTree = "<group>"; };
 		F5F0F5E74F8BE863C70B1ED3 /* Pods-BookmeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookmeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BookmeUITests/Pods-BookmeUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -251,6 +251,7 @@
 			children = (
 				C4AB3E241EEDB02700A1B5A9 /* ImageExtension.swift */,
 				C4AB3E261EEDF3DA00A1B5A9 /* TextFieldExtension.swift */,
+				C4A68D271EF4DC0A00620B79 /* Results.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -258,7 +259,7 @@
 		C4BB888A1EECDA660099F81E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C4AB3E311EEE1B7700A1B5A9 /* ReservaionModel.swift */,
+				C4AB3E311EEE1B7700A1B5A9 /* ReservationModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -277,8 +278,8 @@
 		C4BB888C1EECDA8E0099F81E /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				C4BB885C1EECD45A0099F81E /* Home.storyboard */,
-				C4BB88641EECD45A0099F81E /* LaunchScreen.storyboard */,
+				C4A68D351EF51C5B00620B79 /* Home.storyboard */,
+				C4A68D381EF51C7900620B79 /* LaunchScreen.storyboard */,
 				C41464AB1EF0B8000069E9E6 /* Login.storyboard */,
 				C4AB3E3B1EEE4A6600A1B5A9 /* AddEvent.storyboard */,
 				C40E6FBB1EF25B1300727A94 /* ReservationDetails.storyboard */,
@@ -291,13 +292,13 @@
 			children = (
 				C4AB3E281EEE0C6900A1B5A9 /* AlertViewController.swift */,
 				C4AB3E2A1EEE0D6A00A1B5A9 /* AlertHelp.swift */,
-				C41464A51EEF9E610069E9E6 /* DateCellView.xib */,
-				C41464B41EF207520069E9E6 /* DateCellView.swift */,
 				C40E6FDA1EF36FC700727A94 /* DatePickerCellView.swift */,
 				C4A68D251EF3ADE700620B79 /* EmailCellView.swift */,
 				582BC5371EF44EBD0014F5BA /* NameCellView.swift */,
 				582BC5391EF450D50014F5BA /* PhoneCellView.swift */,
 				582BC53B1EF453800014F5BA /* PreferencesCellView.swift */,
+				C4A68D291EF4EAB500620B79 /* ReservationCellView.xib */,
+				C4A68D2B1EF4EADB00620B79 /* ReservationTableViewCell.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -315,6 +316,7 @@
 			children = (
 				C4AB3E331EEE44CE00A1B5A9 /* TimestampHelper.swift */,
 				C40E6FB41EF2319300727A94 /* TextFieldWithPadding.swift */,
+				C4A68D2D1EF5085600620B79 /* Constants.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -453,14 +455,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4A68D371EF51C5B00620B79 /* Home.storyboard in Resources */,
+				C4A68D3A1EF51C7900620B79 /* LaunchScreen.storyboard in Resources */,
 				C40E6FB91EF25B1300727A94 /* ReservationDetails.storyboard in Resources */,
-				C4BB88661EECD45A0099F81E /* LaunchScreen.storyboard in Resources */,
-				C41464A61EEF9E610069E9E6 /* DateCellView.xib in Resources */,
 				C4AB3E391EEE4A6600A1B5A9 /* AddEvent.storyboard in Resources */,
 				C4AB3E2C1EEE0E6400A1B5A9 /* Localizable.strings in Resources */,
+				C4A68D2A1EF4EAB500620B79 /* ReservationCellView.xib in Resources */,
 				C4BB88631EECD45A0099F81E /* Assets.xcassets in Resources */,
 				C41464A91EF0B8000069E9E6 /* Login.storyboard in Resources */,
-				C4BB885E1EECD45A0099F81E /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -624,22 +626,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4AB3E341EEE44CE00A1B5A9 /* TimestampHelper.swift in Sources */,
+				C4A68D2E1EF5085600620B79 /* Constants.swift in Sources */,
 				C4AB3E231EED275700A1B5A9 /* LoginViewController.swift in Sources */,
 				C4AB3E291EEE0C6900A1B5A9 /* AlertViewController.swift in Sources */,
 				C4BB88611EECD45A0099F81E /* Bookme.xcdatamodeld in Sources */,
+				C4A68D2C1EF4EADB00620B79 /* ReservationTableViewCell.swift in Sources */,
 				C4AB3E2B1EEE0D6A00A1B5A9 /* AlertHelp.swift in Sources */,
 				C4BB885B1EECD45A0099F81E /* HomeViewController.swift in Sources */,
 				C40E6FDB1EF36FC700727A94 /* DatePickerCellView.swift in Sources */,
+				C4A68D281EF4DC0A00620B79 /* Results.swift in Sources */,
 				C40E6FB51EF2319300727A94 /* TextFieldWithPadding.swift in Sources */,
 				C4AB3E271EEDF3DB00A1B5A9 /* TextFieldExtension.swift in Sources */,
 				C4A68D261EF3ADE700620B79 /* EmailCellView.swift in Sources */,
 				C4AB3E361EEE458B00A1B5A9 /* AddEventViewController.swift in Sources */,
 				C40E6FBF1EF25BAE00727A94 /* ReservationDetails.swift in Sources */,
 				C4AB3E251EEDB02700A1B5A9 /* ImageExtension.swift in Sources */,
-				C4AB3E321EEE1B7700A1B5A9 /* ReservaionModel.swift in Sources */,
+				C4AB3E321EEE1B7700A1B5A9 /* ReservationModel.swift in Sources */,
 				582BC53C1EF453800014F5BA /* PreferencesCellView.swift in Sources */,
 				582BC5381EF44EBD0014F5BA /* NameCellView.swift in Sources */,
-				C41464B51EF207520069E9E6 /* DateCellView.swift in Sources */,
 				C4BB88591EECD45A0099F81E /* AppDelegate.swift in Sources */,
 				582BC53A1EF450D50014F5BA /* PhoneCellView.swift in Sources */,
 				582BC53E1EF46E5B0014F5BA /* RealmService.swift in Sources */,
@@ -698,6 +702,22 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		C4A68D351EF51C5B00620B79 /* Home.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C4A68D361EF51C5B00620B79 /* Base */,
+			);
+			name = Home.storyboard;
+			sourceTree = "<group>";
+		};
+		C4A68D381EF51C7900620B79 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C4A68D391EF51C7900620B79 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		C4AB3E2E1EEE0E6400A1B5A9 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -716,26 +736,6 @@
 			);
 			name = AddEvent.storyboard;
 			path = Storyboards;
-			sourceTree = "<group>";
-		};
-		C4BB885C1EECD45A0099F81E /* Home.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C4BB885D1EECD45A0099F81E /* Base */,
-				C4BB88981EECF2E20099F81E /* en */,
-				C4BB88991EECF2ED0099F81E /* es */,
-			);
-			name = Home.storyboard;
-			sourceTree = "<group>";
-		};
-		C4BB88641EECD45A0099F81E /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C4BB88651EECD45A0099F81E /* Base */,
-				C4BB889A1EECF2F40099F81E /* en */,
-				C4BB889B1EECF2F70099F81E /* es */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

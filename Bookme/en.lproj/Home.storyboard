@@ -47,7 +47,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="reservationTableView" destination="VfJ-6D-myw" id="alP-Ol-s4m"/>
+                        <outlet property="reservationTableView" destination="VfJ-6D-myw" id="4fW-bc-Zaf"/>
                         <segue destination="Qg0-Xy-FLg" kind="show" identifier="addEvent" id="L4p-dv-4yY"/>
                     </connections>
                 </viewController>

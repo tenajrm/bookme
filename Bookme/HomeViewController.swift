@@ -7,23 +7,41 @@
 //
 
 import UIKit
+import Foundation
 
 
-class HomeViewController: UIViewController, UITableViewDelegate {
+class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
     var reservarionListData = [ReservationModel]()
+    
   
+    
+    @IBOutlet var reservationTableView: UITableView!
 
+    
     @IBAction func addEvent(_ sender: Any) {
         self.performSegue(withIdentifier: "addEvent", sender: nil)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.barTintColor = UIColor.init(red: 234.0/255.0, green: 87.0/255.0, blue: 76.0/255.0, alpha: 1);
+        //Navigation Bar
+        self.navigationController?.navigationBar.barTintColor = Constants.colorBookme.redLight
         self.navigationController?.navigationBar.tintColor = UIColor.white
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.navigationBar.titleTextAttributes = [ NSForegroundColorAttributeName : UIColor.white ]
+        
+        //get all objects from database
+        var reservationsRealm = [ReservationModel]()
+        reservationsRealm = RealmService.getAllDBObjects() ?? reservationsRealm
+        self.reservarionListData = reservationsRealm
+        
+        //tableView
+        
+        self.reservationTableView.register(UINib(nibName: "ReservationCellView", bundle: nil), forCellReuseIdentifier: "reservationCellID")
+        
+        reservationTableView.delegate = self
+        reservationTableView.dataSource = self
         
     }
     
@@ -49,41 +67,107 @@ class HomeViewController: UIViewController, UITableViewDelegate {
         }
     }
     
+   
+    
     // method to run when table view cell is tapped
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("You tapped cell number \(indexPath.row).")
+        let cell = tableView.cellForRow(at: indexPath) as! ReservationTableViewCell
+        cell.backgroundColor = UIColor.clear
         
     }
     
     
     //Number of sections in table
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 2
+        return 1
     }
     
 
 
     // this method handles row deletion
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        //Delete reservation
+        
+        if editingStyle == .delete {
+            
+            let removeAlert = UIAlertController(title: NSLocalizedString("BookMe", comment: "title") , message: "Are you shure you want to cancel and remove the reservation?"  , preferredStyle: UIAlertControllerStyle.alert)
+            
+                removeAlert.addAction(UIAlertAction(title:  NSLocalizedString("Delete", comment: "Delete") , style: .destructive, handler: { (action: UIAlertAction!) in
+                
+                RealmService.removeObject(phoneCell : self.reservarionListData[indexPath.row])
+                
+                // remove the item from the data model
+                self.reservarionListData.remove(at: indexPath.row)
+                
+                // delete the table view row
+                tableView.deleteRows(at: [indexPath], with: .fade)
+                
+            }))
+            
+            removeAlert.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: "Cancel") , style: .cancel, handler: { (action: UIAlertAction!) in
+                //don't do nothing
+            }))
+            
+            present(removeAlert, animated: true, completion: nil)
+
+        }
         
     }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let reservationCell = tableView.dequeueReusableCell(withIdentifier: "reservationCellID", for: indexPath) as! ReservationTableViewCell
+        
+        let reservation : ReservationModel = self.reservarionListData[indexPath.row]
+        let name = reservation["name"]
+        
+        let timestamp = TimestampHelper.getCurrentTimestamp(timestamp: reservation["reservationDate"] as! Date)
+
+        reservationCell.nameLabel.text = name as? String
+        reservationCell.timestampLabel.text = timestamp
+        let isFull = reservation["isFull"] as! Bool
+        let isExpired = reservation["isExpired"] as! Bool
+        let isCancelled = reservation["isCancelled"] as! Bool
+        
+        if( isFull || isExpired ||  isCancelled ){
+            reservationCell.status.text = "Deactive"
+            reservationCell.status.textColor = Constants.colorBookme.redLight
+             reservationCell.imageCustomCell.backgroundColor = UIColor.lightGray
+            
+        } else {
+            reservationCell.status.text = "Active"
+            reservationCell.status.textColor = UIColor.lightGray
+        }
+        
+       
+        
+        return reservationCell
+    }
+
+    
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
+
+    
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 20.0
+    }
+
     
     
     // This function is called before the segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "addEvent" {
             let backItem = UIBarButtonItem()
-            backItem.title = "Cancel"
+            backItem.title = "Back"
             navigationItem.backBarButtonItem = backItem
             _ = segue.destination as! AddEventViewController
         }
     }
-    
-    
-    
-    
-    
-
 
 }
 
