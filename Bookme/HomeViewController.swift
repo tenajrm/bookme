@@ -23,10 +23,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.performSegue(withIdentifier: "addEvent", sender: nil)
     }
     
-    @IBAction func logOut(_ sender: Any) {
-        _ = self.navigationController?.popViewController(animated: true)
-    }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,8 +47,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func back(sender: UIBarButtonItem) {
+        self.navigationController?.popViewController(animated: true)
         
-        _ = self.navigationController?.popViewController(animated: true)
     }
     
     
