@@ -31,7 +31,7 @@
         <!--LoginViewController-->
         <scene sceneID="W0M-Ub-sbZ">
             <objects>
-                <viewController id="Qzo-Dq-i9B" userLabel="LoginViewController" customClass="LoginViewController" customModule="Bookme" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginVC" id="Qzo-Dq-i9B" userLabel="LoginViewController" customClass="LoginViewController" customModule="Bookme" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2G0-yn-kft"/>
                         <viewControllerLayoutGuide type="bottom" id="uTb-2g-S3P"/>
