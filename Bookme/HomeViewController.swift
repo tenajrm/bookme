@@ -79,6 +79,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
        /* let cell = tableView.cellForRow(at: indexPath) as! ReservationTableViewCell
         cell.backgroundColor = UIColor.lightGray*/
+        //let reservationCell = tableView.cellForRow(at: indexPath) as! ReservationTableViewCell
+        
+        self.performSegue(withIdentifier: "reservationDetails", sender: reservarionListData[indexPath.row])
+        
         
     }
     
@@ -95,7 +99,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         //Delete reservation
         
         if editingStyle == .delete {
-            
+            //TODO create adelegate component
             let removeAlert = UIAlertController(title: NSLocalizedString("titleAlert", comment: "title") , message: NSLocalizedString("messageDelete", comment: "message"), preferredStyle: UIAlertControllerStyle.alert)
             
                 removeAlert.addAction(UIAlertAction(title:  NSLocalizedString("alertDelete", comment: "Delete") , style: .destructive, handler: { (action: UIAlertAction!) in
@@ -130,7 +134,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         let timestamp = reservation["reservationDate"] as! Date
         
         reservationCell.nameLabel.text = name as? String
-        reservationCell.timestampLabel.text =  TimestampHelper.getCurrentTimestamp(timestamp: timestamp )
+        reservationCell.timestampLabel.text =  TimestampHelper.getCurrentTimestamp(timestamp: timestamp, isSystemformat: true )
         let isFull = reservation["isFull"] as! Bool
         let isExpired = reservation["isExpired"] as! Bool
         let isCancelled = reservation["isCancelled"] as! Bool
@@ -172,6 +176,17 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             navigationItem.backBarButtonItem = backItem
             _ = segue.destination as! AddEventViewController
         }
+        
+        if segue.identifier == "reservationDetails" {
+            let backItem = UIBarButtonItem()
+            backItem.title = "Back"
+            navigationItem.backBarButtonItem = backItem
+            if let toReservationViewController = segue.destination as? ReservationDetails{
+                toReservationViewController.reservatioItem = sender as! ReservationModel
+                
+            }
+        }
+        
     }
 
 }

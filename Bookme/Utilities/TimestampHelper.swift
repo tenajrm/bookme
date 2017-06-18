@@ -12,11 +12,15 @@ import UIKit
 
 class TimestampHelper
 {
-    static func getCurrentTimestamp(timestamp : Date) -> String {
+    static func getCurrentTimestamp(timestamp : Date, isSystemformat : Bool) -> String {
         
         let formatter = DateFormatter()
         formatter.timeZone = TimeZone.ReferenceType.system
-        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        if isSystemformat {
+            formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        } else {
+            formatter.dateFormat = "EEEE dd MMMM yyyy"
+        }
         
         let st = formatter.string(from: timestamp)
         return st

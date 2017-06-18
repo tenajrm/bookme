@@ -103,7 +103,7 @@ class AddEventViewController: UIViewController, UITableViewDataSource, UITableVi
         
         let indexPath = IndexPath(row: 0, section: 0)
         let cellLabel = self.tableView.cellForRow(at: indexPath)
-        let dateString = TimestampHelper.getCurrentTimestamp(timestamp: Date())
+        let dateString = TimestampHelper.getCurrentTimestamp(timestamp: Date(), isSystemformat: true)
         cellLabel?.detailTextLabel?.isHidden = false
         cellLabel?.detailTextLabel?.text = dateString
         cellLabel?.detailTextLabel?.textColor = UIColor.black
@@ -183,7 +183,7 @@ class AddEventViewController: UIViewController, UITableViewDataSource, UITableVi
                     
                     let dataPicker = cellDatePicker?.datePickerCom
                     let cellLabel = tableView.cellForRow(at: indexPath)!
-                    let dateString = TimestampHelper.getCurrentTimestamp(timestamp: (dataPicker?.date)!)
+                    let dateString = TimestampHelper.getCurrentTimestamp(timestamp: (dataPicker?.date)!, isSystemformat: true)
                     cellLabel.detailTextLabel?.text = dateString
                     
             }
