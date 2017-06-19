@@ -12,7 +12,6 @@
         <!--Navigation Controller-->
         <scene sceneID="Jx9-kE-PoQ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0nJ-OA-lgy" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController autoresizesArchivedViewToFullSize="NO" automaticallyAdjustsScrollViewInsets="NO" id="89p-Pc-ZbG" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="T54-ok-7Yj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -27,6 +26,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="RCt-Pl-lOH"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0nJ-OA-lgy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3025" y="709"/>
         </scene>

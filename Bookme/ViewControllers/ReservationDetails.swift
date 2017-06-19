@@ -24,11 +24,26 @@ class ReservationDetails: UIViewController {
     
     @IBOutlet var parentView: UIView!
     
-    
+    @IBOutlet weak var markFullButton: UIButton!
     
     @IBAction func markAsFull(_ sender: Any) {
         
+        RealmService.updateObject(updateObjet: reservatioItem, isFull : true)
+        AlertHelp.showAlert(title:  NSLocalizedString("titleAlert", comment: "title"), message: NSLocalizedString("messageFull", comment: "messageFull") )
+    }
+    
+    
+    
+    @IBAction func confirmationCall(_ sender: Any) {
         
+        let phone = String(reservatioItem.phoneNumber)
+        
+        if let phoneCallURL = URL(string: "telprompt://\(phone)") {
+            let application:UIApplication = UIApplication.shared
+            if (application.canOpenURL(phoneCallURL)) {
+                application.open(phoneCallURL, options: [:], completionHandler: nil)
+            }
+        }
         
     }
     
@@ -41,11 +56,10 @@ class ReservationDetails: UIViewController {
         
         activityViewController.excludedActivityTypes = [UIActivityType.assignToContact, UIActivityType.print, UIActivityType.saveToCameraRoll]
         activityViewController.popoverPresentationController?.sourceView = self.parentView
-        //activityViewController.popoverPresentationController?.sourceRect = self.parentView.bounds
+        activityViewController.popoverPresentationController?.sourceRect = self.parentView.bounds
         
         present(activityViewController, animated: true)
         
-
     }
     
     override func viewDidLoad() {
@@ -54,6 +68,10 @@ class ReservationDetails: UIViewController {
         phoneNumber.text = String(reservatioItem.phoneNumber)
         email.text = reservatioItem.email
         dateLabel.text = TimestampHelper.getCurrentTimestamp(timestamp: reservatioItem.reservationDate, isSystemformat: false)
+        
+        if reservatioItem.isFull {
+             markFullButton.isHidden = true
+        }
         
     }
     

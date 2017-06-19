@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -27,10 +26,10 @@
             </objects>
             <point key="canvasLocation" x="-2128" y="-642"/>
         </scene>
-        <!--Details-->
+        <!--Reservation Details-->
         <scene sceneID="E8d-nL-u0L">
             <objects>
-                <viewController storyboardIdentifier="reservationDetailsVC" id="izM-Fd-Oue" customClass="ReservationDetails" customModule="Bookme" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="reservationDetailsVC" id="izM-Fd-Oue" customClass="ReservationDetails" customModule="Bookme" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ywi-mX-f7i"/>
                         <viewControllerLayoutGuide type="bottom" id="HpT-hc-wOt"/>
@@ -40,10 +39,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sb7-G3-piT">
-                                <rect key="frame" x="57" y="135" width="262.5" height="200"/>
+                                <rect key="frame" x="38" y="135" width="300" height="200"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4yi-e4-EZl">
-                                        <rect key="frame" x="124.5" y="75.5" width="57.5" height="25"/>
+                                        <rect key="frame" x="143.5" y="75" width="58" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="mD1-5h-m79"/>
                                         </constraints>
@@ -52,13 +51,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="detailsReservation" translatesAutoresizingMaskIntoConstraints="NO" id="AkW-mk-bdU">
-                                        <rect key="frame" x="66.5" y="75.5" width="50" height="50"/>
+                                        <rect key="frame" x="85.5" y="75" width="50" height="50"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="circle" value="NO"/>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9eX-v4-z8O">
-                                        <rect key="frame" x="126.5" y="100.5" width="136.5" height="25"/>
+                                        <rect key="frame" x="145.5" y="100" width="155" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="IAM-oD-cJV"/>
                                         </constraints>
@@ -67,7 +66,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ua-bX-0ma">
-                                        <rect key="frame" x="126.5" y="125.5" width="47" height="24"/>
+                                        <rect key="frame" x="145.5" y="125" width="47" height="24"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                         <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -95,7 +94,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mzN-F3-2yB">
-                                <rect key="frame" x="36" y="422" width="303" height="34"/>
+                                <rect key="frame" x="38" y="422" width="300" height="34"/>
                                 <color key="backgroundColor" red="0.91764705882352937" green="0.3411764705882353" blue="0.29803921568627451" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Mark Full">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -111,28 +110,47 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sCy-OR-nz2">
-                                <rect key="frame" x="165" y="166.5" width="45.5" height="24"/>
+                                <rect key="frame" x="164" y="166" width="46" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" red="0.91764705879999997" green="0.3411764706" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAT-eS-Yec">
+                                <rect key="frame" x="38" y="496" width="300" height="32"/>
+                                <color key="backgroundColor" red="0.91764705882352937" green="0.3411764705882353" blue="0.29803921568627451" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <state key="normal" title="Call To Confirm">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circle" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="confirmationCall:" destination="izM-Fd-Oue" eventType="touchUpInside" id="XSO-3w-Axs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="mzN-F3-2yB" secondAttribute="trailing" constant="20" id="1Ya-Lb-FUx"/>
-                            <constraint firstItem="mzN-F3-2yB" firstAttribute="leading" secondItem="Tcx-Li-Fif" secondAttribute="leadingMargin" constant="20" id="3WR-eT-QIX"/>
                             <constraint firstItem="sb7-G3-piT" firstAttribute="top" secondItem="ywi-mX-f7i" secondAttribute="bottom" multiplier="1.8" constant="20" id="9Of-af-J1C"/>
+                            <constraint firstItem="cAT-eS-Yec" firstAttribute="centerX" secondItem="Tcx-Li-Fif" secondAttribute="centerX" id="GjX-SB-1nv"/>
                             <constraint firstItem="sCy-OR-nz2" firstAttribute="bottom" secondItem="AkW-mk-bdU" secondAttribute="top" constant="-20" id="PWC-3e-IsN"/>
                             <constraint firstItem="mzN-F3-2yB" firstAttribute="centerX" secondItem="Tcx-Li-Fif" secondAttribute="centerX" id="UNX-zH-FfV"/>
                             <constraint firstItem="mzN-F3-2yB" firstAttribute="top" secondItem="sb7-G3-piT" secondAttribute="bottom" multiplier="1.2" constant="20" id="Wa2-Iy-3FO"/>
                             <constraint firstItem="sb7-G3-piT" firstAttribute="centerX" secondItem="Tcx-Li-Fif" secondAttribute="centerX" id="afF-Pa-5vE"/>
                             <constraint firstItem="sb7-G3-piT" firstAttribute="height" secondItem="Tcx-Li-Fif" secondAttribute="height" multiplier="0.3" id="bW5-kd-Sgj"/>
-                            <constraint firstItem="sb7-G3-piT" firstAttribute="width" secondItem="Tcx-Li-Fif" secondAttribute="width" multiplier="0.7" id="fc1-aW-DBo"/>
+                            <constraint firstItem="sb7-G3-piT" firstAttribute="width" secondItem="Tcx-Li-Fif" secondAttribute="width" multiplier="0.8" id="fc1-aW-DBo"/>
+                            <constraint firstItem="mzN-F3-2yB" firstAttribute="width" secondItem="sb7-G3-piT" secondAttribute="width" id="hgY-4b-AfM"/>
+                            <constraint firstItem="cAT-eS-Yec" firstAttribute="width" secondItem="mzN-F3-2yB" secondAttribute="width" id="tYk-nc-NNa"/>
+                            <constraint firstItem="cAT-eS-Yec" firstAttribute="top" secondItem="mzN-F3-2yB" secondAttribute="bottom" constant="40" id="vjU-Vn-DpE"/>
                             <constraint firstItem="sCy-OR-nz2" firstAttribute="centerX" secondItem="sb7-G3-piT" secondAttribute="centerX" id="ySJ-yN-dFQ"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Details" id="p7H-ca-FTn">
+                    <navigationItem key="navigationItem" title="Reservation Details" id="p7H-ca-FTn">
                         <barButtonItem key="rightBarButtonItem" systemItem="action" id="5Uh-7B-muw">
                             <connections>
                                 <action selector="shareMyBooking:" destination="izM-Fd-Oue" id="To0-es-BSc"/>
@@ -144,6 +162,7 @@
                         <outlet property="dateLabel" destination="sCy-OR-nz2" id="L5y-x8-c3E"/>
                         <outlet property="email" destination="3Ua-bX-0ma" id="32V-8X-ohI"/>
                         <outlet property="guessNAme" destination="4yi-e4-EZl" id="VgF-uq-zrH"/>
+                        <outlet property="markFullButton" destination="mzN-F3-2yB" id="37J-7g-kMi"/>
                         <outlet property="parentView" destination="Tcx-Li-Fif" id="I14-3g-BuJ"/>
                         <outlet property="phoneNumber" destination="9eX-v4-z8O" id="346-FK-Yww"/>
                     </connections>

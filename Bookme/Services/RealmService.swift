@@ -37,13 +37,14 @@ class RealmService
         
     }
     
-    static func updateObject(updateObjet: ReservationModel, isCancelled : Bool) {
+    static func updateObject(updateObjet: ReservationModel, isFull : Bool) {
         
         // Get the default Realm
         let realm = try! Realm()
-        
+       
         try? realm.write {
-            updateObjet.isCancelled = isCancelled
+           
+            updateObjet.isFull = isFull
             realm.add(updateObjet, update: true)
         }
         

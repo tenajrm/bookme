@@ -14,7 +14,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     var reservarionListData = [ReservationModel]()
     
-  
+    let SECTION_HEIGHT = 20.0
+    let ROW_HEIGHT = 80
+    
     
     @IBOutlet var reservationTableView: UITableView!
 
@@ -32,10 +34,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.navigationBar.titleTextAttributes = [ NSForegroundColorAttributeName : UIColor.white ]
         
-        //get all objects from database
-        var reservationsRealm = [ReservationModel]()
-        reservationsRealm = RealmService.getAllDBObjects() ?? reservationsRealm
-        self.reservarionListData = reservationsRealm
+        
         
         //tableView
         
@@ -47,14 +46,24 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func back(sender: UIBarButtonItem) {
-        self.navigationController?.popViewController(animated: true)
+        self.navigationController?.popToRootViewController(animated: true)
+        //self.navigationController?.popToViewController((self.navigationController?.viewControllers.first)!, animated: true)
+    }
+    
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = false
+        
+        //get all objects from database
+        var reservationsRealm = [ReservationModel]()
+        reservationsRealm = RealmService.getAllDBObjects() ?? reservationsRealm
+        self.reservarionListData = reservationsRealm
+        
+        self.reservationTableView.reloadData()
         
     }
     
-    
-    override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.isNavigationBarHidden = false
-    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -77,13 +86,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     // method to run when table view cell is tapped
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       /* let cell = tableView.cellForRow(at: indexPath) as! ReservationTableViewCell
-        cell.backgroundColor = UIColor.lightGray*/
-        //let reservationCell = tableView.cellForRow(at: indexPath) as! ReservationTableViewCell
-        
-        self.performSegue(withIdentifier: "reservationDetails", sender: reservarionListData[indexPath.row])
-        
-        
+        let reservation = reservarionListData[indexPath.row]
+        self.performSegue(withIdentifier: "reservationDetails", sender: reservation)
     }
     
     
@@ -134,15 +138,15 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         let timestamp = reservation["reservationDate"] as! Date
         
         reservationCell.nameLabel.text = name as? String
-        reservationCell.timestampLabel.text =  TimestampHelper.getCurrentTimestamp(timestamp: timestamp, isSystemformat: true )
+        reservationCell.timestampLabel.text =  TimestampHelper.getCurrentTimestamp(timestamp: timestamp, isSystemformat: false )
         let isFull = reservation["isFull"] as! Bool
         let isExpired = reservation["isExpired"] as! Bool
         let isCancelled = reservation["isCancelled"] as! Bool
         
+        
         if( isFull || isExpired ||  isCancelled ){
-            reservationCell.status.text = "Deactive"
+            reservationCell.status.text = "Full"
             reservationCell.status.textColor = Constants.colorBookme.redLight
-             reservationCell.imageCustomCell.backgroundColor = UIColor.lightGray
             
         } else {
             reservationCell.status.text = "Active"
@@ -157,13 +161,13 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+        return CGFloat(ROW_HEIGHT)
     }
 
     
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 20.0
+        return CGFloat(SECTION_HEIGHT)
     }
 
     
@@ -171,19 +175,18 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     // This function is called before the segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "addEvent" {
-            let backItem = UIBarButtonItem()
-            backItem.title = "Back"
-            navigationItem.backBarButtonItem = backItem
+            let backItemAdd = UIBarButtonItem()
+            backItemAdd.title = "Back"
+            navigationItem.backBarButtonItem = backItemAdd
             _ = segue.destination as! AddEventViewController
         }
         
         if segue.identifier == "reservationDetails" {
-            let backItem = UIBarButtonItem()
-            backItem.title = "Back"
-            navigationItem.backBarButtonItem = backItem
+            let backItemHome = UIBarButtonItem()
+            backItemHome.title = "Back"
+            navigationItem.backBarButtonItem = backItemHome
             if let toReservationViewController = segue.destination as? ReservationDetails{
                 toReservationViewController.reservatioItem = sender as! ReservationModel
-                
             }
         }
         

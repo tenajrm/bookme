@@ -17,84 +17,8 @@ class AddEventViewController: UIViewController, UITableViewDataSource, UITableVi
     @IBOutlet weak var tableView: UITableView!
     
     @IBAction func reserveAction(_ sender: Any) {
+        formValidation()
         
-        let reservationObj = ReservationModel()
-        
-        let cells = self.tableView.visibleCells
-    
-        
-        for cell in cells {
-            // get data from cells
-            if(cell.reuseIdentifier == "selecDateCell"){
-                
-                let timestamp = cell.detailTextLabel?.text
-                if timestamp != "" {
-                    reservationObj.reservationDate =  TimestampHelper.stringToDate(timestamp: timestamp!)
-                } else {
-                    reservationObj.reservationDate =  Date()
-                }
-            }
-            
-            if(cell.reuseIdentifier == "emailCell"){
-                let emailCellText = cell as? EmailCellView
-                
-                if emailCellText?.emailTextField.text == "" {
-                    AlertHelp.showAlert(title:  NSLocalizedString("titleAlert", comment: "title"), message: NSLocalizedString("emailRequired", comment: "emailRequired") )
-                    return
-                
-                } else {
-                    reservationObj.email = (emailCellText?.emailTextField.text)!
-                }
-                
-            }
-            
-            if(cell.reuseIdentifier == "nameCell"){
-                let nameCellText = cell as? NameCellView
-                if (nameCellText?.nameTextFieldCell.text == "") {
-                    //alert
-                    AlertHelp.showAlert(title:  NSLocalizedString("titleAlert", comment: "title"), message: NSLocalizedString("messageName", comment: "nameEmpty") )
-                    return
-                } else {
-                    reservationObj.name = (nameCellText?.nameTextFieldCell.text)!
-                    print("\(String(describing: nameCellText?.nameTextFieldCell.text))")
-                }
-            }
-            
-            if(cell.reuseIdentifier == "phoneCell"){
-                let phoneCellText = cell as? PhoneCellView
-                //No optional value
-                if (phoneCellText?.phoneTextCellView.text == "") {
-                    //alert 
-                    AlertHelp.showAlert(title:  NSLocalizedString("titleAlert", comment: "title"), message: NSLocalizedString("messagePhone", comment: "phoneempty") )
-                    return
-                } else {
-                    let phone : String = (phoneCellText?.phoneTextCellView.text)!
-                    let isAllNumber = phone.components(separatedBy: CharacterSet.decimalDigits.inverted).joined(separator: "")
-                    
-                    guard phone.characters.count == isAllNumber.characters.count else {
-                        AlertHelp.showAlert(title:  NSLocalizedString("titleAlert", comment: "title"), message: NSLocalizedString("messagePhoneError", comment: "phoneempty"))
-                        return
-                    }
-                    reservationObj.phoneNumber = Int(phone)!
-                }
-                
-            }
-            
-            if(cell.reuseIdentifier == "specialRCell"){
-                let preferencesCellText = cell as? PreferencesCellView
-                reservationObj.specialRequest = (preferencesCellText?.preferencesTextView.text)!
-                print("\(String(describing: preferencesCellText?.preferencesTextView.text))")
-            }
-        }
-        
-       
-        reservationObj.isCancelled = false
-        reservationObj.isFull = false
-        reservationObj.isExpired = false
-        
-        RealmService.writeObjects(obj: reservationObj);
-        //Sending back 
-        self.performSegue(withIdentifier: "home", sender: nil)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -116,15 +40,20 @@ class AddEventViewController: UIViewController, UITableViewDataSource, UITableVi
         
         helper = TableViewHelper(tableView:tableView)
         
-        
-        helper.addCell(0, cell: tableView.dequeueReusableCell(withIdentifier: "selecDateCell")! as UITableViewCell, name: "selecDateCell")
-        helper.addCell(0, cell: tableView.dequeueReusableCell(withIdentifier: "datePickerCell")! as UITableViewCell, name: "datePickerCell")
-        
-        helper.addCell(1, cell: tableView.dequeueReusableCell(withIdentifier: "nameCell")! as UITableViewCell, name: "nameCell")
-        helper.addCell(1, cell: tableView.dequeueReusableCell(withIdentifier: "phoneCell")! as UITableViewCell, name: "phoneCell")
-        helper.addCell(1, cell: tableView.dequeueReusableCell(withIdentifier: "emailCell")! as UITableViewCell, name: "emailCell")
-        
-        helper.addCell(2, cell: tableView.dequeueReusableCell(withIdentifier: "specialRCell")! as UITableViewCell, name: "specialRCell")
+        let items  = [["selecDateCell", "datePickerCell"], ["nameCell", "phoneCell", "emailCell"], ["specialRCell"] ]
+        var section = 0
+        for item in items {
+            
+            section = section + 1
+            var counter = 0
+            
+            while counter < item.count   {
+                print("\(item[counter])")
+                helper.addCell(section, cell: tableView.dequeueReusableCell(withIdentifier: item[counter])! as UITableViewCell, name: item[counter])
+                counter = counter + 1
+            }
+            
+        }
         
         helper.hideCell("datePickerCell")
         
@@ -163,7 +92,7 @@ class AddEventViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    
+        
         return helper.cellForRowAtIndexPath(indexPath)
     }
     
@@ -215,7 +144,7 @@ class AddEventViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         
         if section == 1 {
-            return NSLocalizedString("contactInfo", comment: "contact info")
+            return NSLocalizedString("contactInfo", comment: "contactinfo")
         }
         return ""
         
@@ -224,6 +153,94 @@ class AddEventViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 50.0
+    }
+    
+    func formValidation() {
+        
+        let reservationObj = ReservationModel()
+        
+        let cells = self.tableView.visibleCells
+        
+        
+        for cell in cells {
+            // get data from cells
+            if(cell.reuseIdentifier == "selecDateCell"){
+                
+                let timestamp = cell.detailTextLabel?.text
+                if timestamp != "" {
+                    reservationObj.reservationDate =  TimestampHelper.stringToDate(timestamp: timestamp!)
+                } else {
+                    reservationObj.reservationDate =  Date()
+                }
+            }
+            
+            if(cell.reuseIdentifier == "emailCell"){
+                let emailCellText = cell as? EmailCellView
+                
+                if emailCellText?.emailTextField.text == "" {
+                    AlertHelp.showAlert(title:  NSLocalizedString("titleAlert", comment: "title"), message: NSLocalizedString("emailRequired", comment: "emailRequired") )
+                    return
+                    
+                } else {
+                    reservationObj.email = (emailCellText?.emailTextField.text)!
+                }
+                
+            }
+            
+            if(cell.reuseIdentifier == "nameCell"){
+                let nameCellText = cell as? NameCellView
+                if (nameCellText?.nameTextFieldCell.text == "") {
+                    //alert
+                    AlertHelp.showAlert(title:  NSLocalizedString("titleAlert", comment: "title"), message: NSLocalizedString("messageName", comment: "nameEmpty") )
+                    return
+                } else {
+                    reservationObj.name = (nameCellText?.nameTextFieldCell.text)!
+                    print("\(String(describing: nameCellText?.nameTextFieldCell.text))")
+                }
+            }
+            
+            if(cell.reuseIdentifier == "phoneCell"){
+                let phoneCellText = cell as? PhoneCellView
+                let phone  = Int((phoneCellText?.phoneTextCellView.text?.characters.count)!)
+                //No optional value
+                if ((phoneCellText?.phoneTextCellView.text)! == "" || phone < 9) {
+                    //alert
+                    AlertHelp.showAlert(title:  NSLocalizedString("titleAlert", comment: "title"), message: NSLocalizedString("messagePhone", comment: "messagePhone") )
+                    return
+                } else {
+                    let phone : String = (phoneCellText?.phoneTextCellView.text)!
+                    let isAllNumber = phone.components(separatedBy: CharacterSet.decimalDigits.inverted).joined(separator: "")
+                    
+                    guard phone.characters.count == isAllNumber.characters.count else {
+                        AlertHelp.showAlert(title:  NSLocalizedString("titleAlert", comment: "title"), message: NSLocalizedString("messagePhoneError", comment: "phoneempty"))
+                        return
+                    }
+                    reservationObj.phoneNumber = Int(phone)!
+                }
+                
+            }
+            
+            if(cell.reuseIdentifier == "specialRCell"){
+                let preferencesCellText = cell as? PreferencesCellView
+                reservationObj.specialRequest = (preferencesCellText?.preferencesTextView.text)!
+            }
+        }
+        
+        
+        reservationObj.isCancelled = false
+        reservationObj.isFull = false
+        reservationObj.isExpired = false
+        
+        RealmService.writeObjects(obj: reservationObj);
+        // Clean data
+        
+        self.navigationController?.popViewController(animated: true)
+        
+        AlertHelp.showAlert(title:  NSLocalizedString("titleAlert", comment: "title"), message: NSLocalizedString("messageAdded", comment: "messageAdded") )
+        
+        
+
+        
     }
 
 }

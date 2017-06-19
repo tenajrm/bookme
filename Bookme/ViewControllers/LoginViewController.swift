@@ -157,9 +157,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     // This function is called before the segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "home" {
-            let backItem = UIBarButtonItem()
-            backItem.title = "Log Out"
-            navigationItem.backBarButtonItem = backItem
+            let backItemLogin = UIBarButtonItem()
+            backItemLogin.title = "Log Out"
+            navigationItem.backBarButtonItem = backItemLogin
             _ = segue.destination as! HomeViewController
         }
     }

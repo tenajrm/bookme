@@ -20,8 +20,9 @@ messagePhoneError = "The phone number is invalid.";
 messageName  = "Please provide guess name.";
 contactInfo =  "Contact Information";
 specialRequest = "Special Request";
-
+messageFull = "The reservation was marked as full";
 emailRequired = "The email is required";
+messageAdded =  "A new reservation Added!!";
 
 //General
 alertOk = "OK";
